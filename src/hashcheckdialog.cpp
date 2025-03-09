@@ -27,9 +27,9 @@ HashCheckDialog::HashCheckDialog(QWidget *parent)
 
     connect(m_ui->open, &QPushButton::clicked, this, &HashCheckDialog::openFile);
     // connect(ui->closeButton, &QPushButton::clicked, this, &HashCheckDialog::close);
-    connect(m_ui->calculateButton, &QPushButton::clicked, this, [=] { calculate(m_ui->hashSelector->currentText()); });
+    connect(m_ui->calculateButton, &QPushButton::clicked, this, [=, this] { calculate(m_ui->hashSelector->currentText()); });
 
-    connect(m_ui->hashSelector, static_cast<void (QComboBox::*)(const QString &)>(&QComboBox::currentTextChanged), [=](QString text) { calculate(text); });
+    connect(m_ui->hashSelector, static_cast<void (QComboBox::*)(const QString &)>(&QComboBox::currentTextChanged), [=, this](QString text) { calculate(text); });
 
     connect(m_ui->copyButton, &QPushButton::clicked, this, &HashCheckDialog::copyToClipboard);
     connect(m_ui->fileEdit, &QLineEdit::textChanged, this, &HashCheckDialog::textChanged);

@@ -48,47 +48,47 @@ MainWindow::MainWindow(QWidget *parent)
 
     // General
     // clang-format off
-    connect(m_ui->menuAboutArsenic, &QAction::triggered, this,   [=] { aboutArsenic(); });
-    connect(m_ui->menuHashCalculator, &QAction::triggered, this, [=] { hashCalculator(); });
+    connect(m_ui->menuAboutArsenic, &QAction::triggered, this,   [=, this] { aboutArsenic(); });
+    connect(m_ui->menuHashCalculator, &QAction::triggered, this, [=, this] { hashCalculator(); });
     connect(m_ui->menuAboutQt, &QAction::triggered, this,        [=] { qApp->aboutQt(); });
-    connect(m_ui->menuGenerator, &QAction::triggered, this,      [=] { generator(); });
-    connect(m_ui->pushGenerator, &QPushButton::clicked, this,    [=] { generator(); });
-    connect(m_ui->menuQuit, &QAction::triggered, this,           [=] { quit(); });
-    connect(m_ui->menuQuit2, &QAction::triggered, this,          [=] { quit(); });
-    connect(m_ui->menuQuit3, &QAction::triggered, this,          [=] { quit(); });
-    connect(m_ui->menuConfiguration, &QAction::triggered, this,  [=] { configuration(); });
-    connect(m_ui->menuArgon2Tests, &QAction::triggered, this,    [=] { Argon2_tests(); });
-    connect(m_ui->menuViewToolbar, &QAction::triggered, this,    [=](const bool &checked) { m_ui->toolBar->setVisible(checked); });
-    connect(m_ui->tabWidget, &QTabWidget::currentChanged, this,  [=](const quint32 &index) { switchTab(index); });
-    connect(m_ui->checkViewpass, &QCheckBox::stateChanged, this, [=](const quint32 &index) { viewPassStateChanged(index); });
+    connect(m_ui->menuGenerator, &QAction::triggered, this,      [=, this] { generator(); });
+    connect(m_ui->pushGenerator, &QPushButton::clicked, this,    [=, this] { generator(); });
+    connect(m_ui->menuQuit, &QAction::triggered, this,           [=, this] { quit(); });
+    connect(m_ui->menuQuit2, &QAction::triggered, this,          [=, this] { quit(); });
+    connect(m_ui->menuQuit3, &QAction::triggered, this,          [=, this] { quit(); });
+    connect(m_ui->menuConfiguration, &QAction::triggered, this,  [=, this] { configuration(); });
+    connect(m_ui->menuArgon2Tests, &QAction::triggered, this,    [=, this] { Argon2_tests(); });
+    connect(m_ui->menuViewToolbar, &QAction::triggered, this,    [=, this](const bool &checked) { m_ui->toolBar->setVisible(checked); });
+    connect(m_ui->tabWidget, &QTabWidget::currentChanged, this,  [=, this](const quint32 &index) { switchTab(index); });
+    connect(m_ui->checkViewpass, &QCheckBox::checkStateChanged, this, [=, this](const quint32 &index) { viewPassStateChanged(index); });
 
     // EncryptPad
-    connect(m_ui->menuOpenTxt, &QAction::triggered, this,        [=] { openTxtFile(); });
-    connect(m_ui->menuSaveTxt, &QAction::triggered, this,        [=] { saveTxtFile(); });
-    connect(m_ui->menuSaveTxtAs, &QAction::triggered, this,      [=] { saveTxtFileAs(); });
-    connect(m_ui->menuEncryptTxt, &QAction::triggered, this,     [=] { encryptText(); });
-    connect(m_ui->menuDecryptTxt, &QAction::triggered, this,     [=] { decryptText(); });
-    connect(m_ui->menuClearEditor, &QAction::triggered, this,    [=] { clearEditor(); });
-    connect(m_ui->pushEncryptTxt, &QPushButton::clicked, this,   [=] { encryptText(); });
-    connect(m_ui->pushDecryptTxt, &QPushButton::clicked, this,   [=] { decryptText(); });
+    connect(m_ui->menuOpenTxt, &QAction::triggered, this,        [=, this] { openTxtFile(); });
+    connect(m_ui->menuSaveTxt, &QAction::triggered, this,        [=, this] { saveTxtFile(); });
+    connect(m_ui->menuSaveTxtAs, &QAction::triggered, this,      [=, this] { saveTxtFileAs(); });
+    connect(m_ui->menuEncryptTxt, &QAction::triggered, this,     [=, this] { encryptText(); });
+    connect(m_ui->menuDecryptTxt, &QAction::triggered, this,     [=, this] { decryptText(); });
+    connect(m_ui->menuClearEditor, &QAction::triggered, this,    [=, this] { clearEditor(); });
+    connect(m_ui->pushEncryptTxt, &QPushButton::clicked, this,   [=, this] { encryptText(); });
+    connect(m_ui->pushDecryptTxt, &QPushButton::clicked, this,   [=, this] { decryptText(); });
 
     // log
-    connect(m_ui->menuClearLogView, &QAction::triggered, this,   [=] { clearLog(); });
+    connect(m_ui->menuClearLogView, &QAction::triggered, this,   [=, this] { clearLog(); });
 
     // EncryptFile
-    connect(m_ui->menuAddFiles, &QAction::triggered, this,       [=] { addFiles(); });
-    connect(m_ui->menuAddFolder, &QAction::triggered, this,       [=] { addFolder(); });
-    connect(m_ui->menuClearList, &QAction::triggered, this,      [=] { clearListFiles(); });
-    connect(m_ui->menuEncryptList, &QAction::triggered, this,    [=] { encryptFiles(); });
-    connect(m_ui->menuDecryptList, &QAction::triggered, this,    [=] { decryptFiles(); });
-    connect(m_ui->pushEncrypt, &QPushButton::clicked, this,      [=] { encryptFiles(); });
-    connect(m_ui->pushDecrypt, &QPushButton::clicked, this,      [=] { decryptFiles(); });
-    connect(m_ui->menuAbortJob, &QAction::triggered, this,       [=] { abortJob(); });
+    connect(m_ui->menuAddFiles, &QAction::triggered, this,       [=, this] { addFiles(); });
+    connect(m_ui->menuAddFolder, &QAction::triggered, this,       [=, this] { addFolder(); });
+    connect(m_ui->menuClearList, &QAction::triggered, this,      [=, this] { clearListFiles(); });
+    connect(m_ui->menuEncryptList, &QAction::triggered, this,    [=, this] { encryptFiles(); });
+    connect(m_ui->menuDecryptList, &QAction::triggered, this,    [=, this] { decryptFiles(); });
+    connect(m_ui->pushEncrypt, &QPushButton::clicked, this,      [=, this] { encryptFiles(); });
+    connect(m_ui->pushDecrypt, &QPushButton::clicked, this,      [=, this] { decryptFiles(); });
+    connect(m_ui->menuAbortJob, &QAction::triggered, this,       [=, this] { abortJob(); });
 
-    connect(m_file_crypto.get(), &Crypto_Thread::statusMessage, this,         [=](const QString &message) { onMessageChanged(message); });
-    connect(m_file_crypto.get(), &Crypto_Thread::updateProgress, this,        [=](const QString &filename, const quint32 &progress) { onPercentProgress(filename, progress); });
-    connect(m_file_crypto.get(), &Crypto_Thread::addEncrypted, this,          [=](const QString &filepath) { AddEncryptedFile(filepath); });
-    connect(m_file_crypto.get(), &Crypto_Thread::deletedAfterSuccess, this,   [=](const QString &filepath) { removeDeletedFile(filepath); });
+    connect(m_file_crypto.get(), &Crypto_Thread::statusMessage, this,         [=, this](const QString &message) { onMessageChanged(message); });
+    connect(m_file_crypto.get(), &Crypto_Thread::updateProgress, this,        [=, this](const QString &filename, const quint32 &progress) { onPercentProgress(filename, progress); });
+    connect(m_file_crypto.get(), &Crypto_Thread::addEncrypted, this,          [=, this](const QString &filepath) { AddEncryptedFile(filepath); });
+    connect(m_file_crypto.get(), &Crypto_Thread::deletedAfterSuccess, this,   [=, this](const QString &filepath) { removeDeletedFile(filepath); });
 
 
     //connect(&pwGenerator, &PasswordGeneratorDialog::appliedPassword, this, [=](const QString &password) { setPassword(password); });

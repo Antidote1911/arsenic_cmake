@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.15)
 
 project(cpp_project)
 
-# Optionally set c++ standard for all targets
-#set(CMAKE_CXX_STANDARD 20)
+# Set c++ standard for all targets
+set(CMAKE_CXX_STANDARD 20)
 
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
