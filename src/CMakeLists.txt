@@ -54,9 +54,6 @@ add_executable(arsenic
     Translator.cpp
     skin/skin.cpp
     rsc.qrc
-    dict-src.h
-    zxcvbn.cpp
-    zxcvbn.h
 )
 
 add_subdirectory(arscore)
