@@ -488,9 +488,9 @@ void MainWindow::clearListFiles()
 
 void MainWindow::generator()
 {
-    auto pwGenerator = new PasswordGeneratorDialog;
+    auto pwGenerator = new PasswordGeneratorWidget;
 
-    pwGenerator->setStandaloneMode(false);
+    //pwGenerator->setStandaloneMode(false);
     connect(pwGenerator, SIGNAL(appliedPassword(QString)), SLOT(setPassword(QString)));
     connect(pwGenerator, SIGNAL(dialogTerminated()), pwGenerator, SLOT(close()));
     pwGenerator->exec();

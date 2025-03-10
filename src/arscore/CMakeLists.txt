@@ -14,7 +14,7 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 add_library(arscore SHARED
     CryptoThread.h
     libexport.h
-    passwordGenerator.h
+    PasswordGenerator.h
     textcrypto.h
     triplecryptoengine.h
     simplecryptoengine.h
@@ -22,7 +22,7 @@ add_library(arscore SHARED
     consts.h
     messages.h
     CryptoThread.cpp
-    passwordGenerator.cpp
+    PasswordGenerator.cpp
     textcrypto.cpp
     triplecryptoengine.cpp
     simplecryptoengine.cpp
@@ -32,6 +32,11 @@ add_library(arscore SHARED
     dict-src.h
     zxcvbn.cpp
     zxcvbn.h
+    PasswordHealth.h
+    PasswordHealth.cpp
+    Random.cpp
+    Random.h
+    Global.h
 )
 
 target_link_libraries(arscore PRIVATE Qt::Core Qt::Widgets ${BOTAN_LIBRARIES})

@@ -20,7 +20,8 @@ add_executable(arsenic
     Delegate.h
     aboutDialog.h
     argonTests.h
-    clipboard.h
+    Clipboard.h
+    Clipboard.cpp
     configDialog.h
     hashcheckdialog.h
     loghtml.h
@@ -32,8 +33,7 @@ add_executable(arsenic
     Config.cpp
     Delegate.cpp
     aboutDialog.cpp
-    argonTests.cpp
-    clipboard.cpp
+    argonTests.cpp    
     configDialog.cpp
     hashcheckdialog.cpp
     loghtml.cpp
