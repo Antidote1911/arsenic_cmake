@@ -1,8 +1,7 @@
 #include "triplecryptoengine.h"
 #include <cassert>
 
-#include "botan/sodium.h"
-#include <botan/pwdhash.h>
+#include "botan_all.h"
 
 using namespace Botan;
 

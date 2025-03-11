@@ -7,6 +7,7 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 set(CMAKE_AUTORCC ON)
 qt_standard_project_setup()
 
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/../../cmake)
 
 add_executable(arsenic
     WIN32 MACOSX_BUNDLE
@@ -53,6 +54,6 @@ target_link_libraries(arsenic
     PRIVATE
         Qt::Core
         Qt::Widgets
-        ${BOTAN_LIBRARIES}
         arscore
+        botan_test
 )

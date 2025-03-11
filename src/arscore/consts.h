@@ -3,7 +3,7 @@
 #include <QObject>
 #include <QVersionNumber>
 
-#include "botan/version.h"
+#include "botan_all.h"
 #include "libexport.h"
 
 #ifdef CONSTS_EXPORT

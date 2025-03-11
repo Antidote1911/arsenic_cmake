@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/../../cmake)
 
 add_library(arscore SHARED
     CryptoThread.h
@@ -39,6 +40,6 @@ add_library(arscore SHARED
     Global.h
 )
 
-target_link_libraries(arscore PRIVATE Qt::Core Qt::Widgets ${BOTAN_LIBRARIES})
+target_link_libraries(arscore PRIVATE Qt::Core Qt::Widgets botan_test)
 
 target_compile_definitions(arscore PRIVATE ARSCORE_LIBRARY)
