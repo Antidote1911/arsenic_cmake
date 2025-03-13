@@ -27,7 +27,6 @@ jobs:
     - name: Configure and Build
       run: |
         mkdir build
-        cd build
         cmake -S . -B build/release
 
     - name: Archive Build
