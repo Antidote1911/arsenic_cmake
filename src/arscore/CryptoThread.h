@@ -4,15 +4,9 @@
 #include <QThread>
 
 #include "consts.h"
-#include "libexport.h"
 
-#ifdef CRYPTOTHREAD_EXPORT
-#define CRYPTOTHREAD_API Q_DECL_EXPORT
-#else
-#define CRYPTOTHREAD_API Q_DECL_IMPORT
-#endif
 
-class LIB_EXPORT Crypto_Thread : public QThread {
+class Crypto_Thread : public QThread {
     Q_OBJECT
 
   public:

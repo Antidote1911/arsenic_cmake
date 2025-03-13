@@ -319,7 +319,7 @@ quint32 Crypto_Thread::tripleDecrypt(const QString& src_path)
     }
 
     // get from the decrypted header the three internal keys and the original filename
-    const quint8* mk2 = master_buffer.begin().base();
+    const quint8* mk2 = &master_buffer[0];
     const OctetString name(mk2, fileNameSize);
 
     // create the decrypted file
@@ -570,7 +570,7 @@ quint32 Crypto_Thread::simpleDecrypt(const QString& src_path)
     }
 
     // get from the decrypted header the three internal keys and the original filename
-    const quint8* mk2 = master_buffer.begin().base();
+    const quint8* mk2 = &master_buffer[0];
     const OctetString name(mk2, fileNameSize);
 
     // create the decrypted file

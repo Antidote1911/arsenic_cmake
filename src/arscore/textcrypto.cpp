@@ -76,7 +76,7 @@ quint32 textCrypto::decryptString(QString &cipher, QString const &password)
         if (ciphertext[i] != get_byte_var(i, m_const->CRYPTOBOX_VERSION_CODE)) {
             return (BAD_CRYPTOBOX_VERSION);
         }
-    const auto *tmp{ciphertext.begin().base()};
+    const auto *tmp{ &ciphertext[0]};
     const OctetString version(tmp, m_const->VERSION_CODE_LEN);
     const OctetString salt(&tmp[m_const->VERSION_CODE_LEN], m_const->ARGON_SALT_LEN);
     const InitializationVector tripleNonce(&tmp[m_const->VERSION_CODE_LEN + m_const->ARGON_SALT_LEN], m_const->CIPHER_IV_LEN * 3);

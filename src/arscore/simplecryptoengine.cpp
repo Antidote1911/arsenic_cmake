@@ -62,7 +62,7 @@ void SimpleCryptoEngine::setNonce(const SecureVector<quint8> &nonce)
 {
     assert(nonce.size() == m_const->CIPHER_IV_LEN && "Triple nonce must be 24 bytes.");
     // split the triple nonce
-    const auto *n{nonce.begin().base()};
+    const auto *n{ &nonce[0]};
     const InitializationVector iv(n, m_const->CIPHER_IV_LEN);
 
     m_nonce = iv.bits_of();

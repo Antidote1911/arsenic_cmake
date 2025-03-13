@@ -4,7 +4,6 @@
 #include <QVersionNumber>
 
 #include "botan_all.h"
-#include "libexport.h"
 
 #ifdef CONSTS_EXPORT
 #define CRYPTOTHREAD_API Q_DECL_EXPORT
@@ -12,7 +11,7 @@
 #define CONSTS_API Q_DECL_IMPORT
 #endif
 
-class LIB_EXPORT consts : public QObject {
+class consts : public QObject {
     Q_OBJECT
   public:
     explicit consts(QObject *parent = nullptr);

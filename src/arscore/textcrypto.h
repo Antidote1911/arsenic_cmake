@@ -4,9 +4,8 @@
 #include <memory>
 
 #include "consts.h"
-#include "libexport.h"
 
-class LIB_EXPORT textCrypto : public QObject {
+class textCrypto : public QObject {
     Q_OBJECT
   public:
     explicit textCrypto(QObject *parent = nullptr);

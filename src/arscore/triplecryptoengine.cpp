@@ -46,7 +46,7 @@ void TripleCryptoEngine::derivePassword(const QString &password, quint32 memlimi
                                m_salt.data(),
                                m_salt.size());
 
-    const auto *mk{key_buffer.begin().base()};
+    const auto *mk{ &key_buffer[0]};
     const SymmetricKey ChaCha20_key(mk, m_const->CIPHER_KEY_LEN);
     const SymmetricKey AES_key(&mk[m_const->CIPHER_KEY_LEN], m_const->CIPHER_KEY_LEN);
     const SymmetricKey Serpent_key(&mk[m_const->CIPHER_KEY_LEN + m_const->CIPHER_KEY_LEN], m_const->CIPHER_KEY_LEN);
@@ -60,7 +60,7 @@ void TripleCryptoEngine::setNonce(const SecureVector<quint8> &nonce)
 {
     assert(nonce.size() == m_const->CIPHER_IV_LEN * 3 && "Triple nonce must be 24*3 bytes.");
     // split the triple nonce
-    const auto *n{nonce.begin().base()};
+    const auto *n{&nonce[0]};
     const InitializationVector iv1(n, m_const->CIPHER_IV_LEN);
     const InitializationVector iv2(&n[m_const->CIPHER_IV_LEN], m_const->CIPHER_IV_LEN);
     const InitializationVector iv3(&n[m_const->CIPHER_IV_LEN + m_const->CIPHER_IV_LEN], m_const->CIPHER_IV_LEN);
