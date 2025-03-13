@@ -125,7 +125,7 @@ Any suggestions or help are welcome.
 - [Jack Lloyd from randombit.net](https://botan.randombit.net) for the powerful Botan C++ cryptographic library. You can find the Github [here](https://github.com/randombit/botan).  
 It is released under the permissive Simplified [BSD license](https://botan.randombit.net/license.txt)
 
-- [KeepassXC](https://github.com/keepassxreboot/keepassxc) for some big portions of code. Including password generator (modified for use Botan Random Number Generator) and the QSettings wrapper class.
+- [KeepassXC](https://github.com/keepassxreboot/keepassxc) for the password generator.
 
 ## CAUTION: ##
 A simple tool to encrypt file is not magic. If You use an insecure system, Arsenic (and all encryption tools) are useless. Arsenic do not protect you from key-logger, disk analyze, virus, operating system cache etc...
