@@ -28,7 +28,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        C:\Qt\6.2.2\msvc2019_64\bin\qmake.exe ..
+        qmake ..
         nmake
 
     - name: Archive Build
