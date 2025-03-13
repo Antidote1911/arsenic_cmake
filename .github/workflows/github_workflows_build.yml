@@ -1,0 +1,38 @@
+name: Build Qt6 Application for Windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        version: '6.2.2'
+        host: 'windows'
+        target: 'desktop'
+        arch: 'win64_msvc2019_64'
+
+    - name: Configure and Build
+      run: |
+        mkdir build
+        cd build
+        C:\Qt\6.2.2\msvc2019_64\bin\qmake.exe ..
+        nmake
+
+    - name: Archive Build
+      uses: actions/upload-artifact@v2
+      with:
+        name: Qt6App
+        path: build/
