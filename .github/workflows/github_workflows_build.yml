@@ -28,8 +28,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        qmake ..
-        nmake
+        cmake -S . -B build/release
 
     - name: Archive Build
       uses: actions/upload-pages-artifact@v3
