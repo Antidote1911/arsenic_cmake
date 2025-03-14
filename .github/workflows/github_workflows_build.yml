@@ -46,6 +46,4 @@ jobs:
       with:
         artifacts: "build/arsenic.zip"
         allowUpdates: true
-          draft: false
-          makeLatest: true
-          token: ${{ github.token }}
+
