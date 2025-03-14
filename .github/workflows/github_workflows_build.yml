@@ -45,5 +45,5 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: arsenic.zip
-        path: build/arsenic.zip
+        path: build\src\Release
 
