@@ -1,62 +1,37 @@
-name: Build for Windows
+name: ActionsCI
 
 on:
   push:
-    Branches: master
-
-env:
-  BUILD_TYPE: Release
-  BUILD_FILENAME: arsenic.win64
-  APP_EXECUTABLE_FILENAME: arsenic
-  QT_ARCH: win64_msvc2019_64
-  QT_VERSION: "6.8.1"
+    branches: [master, develop]
 
 jobs:
-  release-windows-64:
-    name: Windows Latest
+  build-windows-qt68:
     runs-on: windows-latest
-    permissions: write-all
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.ref }}
-
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          host: windows
-          target: "desktop"
-          version: ${{ env.QT_VERSION }}
-          arch: ${{ env.QT_ARCH }}
-          dir: "${{ github.workspace }}/qt"
-          install-deps: "true"
-          setup-python: "false"
-
-      - name: Configure
-        working-directory: ${{ github.workspace }}
-        run: cmake -B./build -S. ${{ github.workspace }} \
+    - uses: actions/checkout@main
+    - name: Setup msbuild
+      uses: microsoft/setup-msbuild@v2
+      with:
+        vs-version: '[17,18)'  # 17.xx
+        msbuild-architecture: x64
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v4
+      with:
+        version:      6.8.1
+        host:         windows
+        target:       desktop
+        modules:      qtmultimedia
+        setup-python: false
+    - name: build
+      shell: cmd
+      run: |
+        call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+        set CL=/MP
+        cmake -B./build -S. ${{ github.workspace }} \
           -DAPP_ARCHITECTURE=x64 \
           -DAPP_EXECUTABLE_FILENAME=${{ env.APP_EXECUTABLE_FILENAME }}
           -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
           -DCMAKE_PREFIX_PATH=${{ env.Qt6_Dir }}
-
-      - name: Build
-        working-directory: ${{ github.workspace }}
-        run: cmake --build ./build --config ${{ env.BUILD_TYPE }}        
-
-      - name: Deploy
-        working-directory: ${{ github.workspace }}
-        run: windeployqt.exe ./bin/${{ env.BUILD_TYPE }}/${{ env.APP_EXECUTABLE_FILENAME }}.exe \
-          --verbose 1 \
-          --release \
-          --no-svg \
-          --no-opengl \
-          --no-opengl-sw \
-          --no-translations \
-          --no-compiler-runtime \
-          --no-system-d3d-compiler \
-
-      - name: Compress
-        run: |
-          Compress-Archive -Path ${{ github.workspace }}\bin\${{ env.BUILD_TYPE }}\* -DestinationPath ${{ github.workspace }}\bin\${{ env.BUILD_FILENAME }}.${{ github.ref_name }}.zip
+        cmake --build ./build --config release
+    - name: deploy
+      run: windeployqt.exe .\dist\shogimaru.exe
