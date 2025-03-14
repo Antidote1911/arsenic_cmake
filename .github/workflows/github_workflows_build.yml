@@ -48,5 +48,4 @@ jobs:
         allowUpdates: true
           draft: false
           makeLatest: true
-          name: ${{ github.ref_name }}
           token: ${{ github.token }}
