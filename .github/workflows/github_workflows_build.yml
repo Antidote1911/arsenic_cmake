@@ -29,7 +29,7 @@ jobs:
         cmake -S . -B ./build
 
     - name: Archive Build
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-artifact@v3
       with:
         name: Qt6App
-        path: arsenic_cmake
+        path: build
