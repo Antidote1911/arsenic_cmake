@@ -45,3 +45,8 @@ jobs:
       uses: ncipollo/release-action@v1.12.0
       with:
         artifacts: "build/arsenic.zip"
+        allowUpdates: true
+          draft: false
+          makeLatest: true
+          name: ${{ github.ref_name }}
+          token: ${{ github.token }}
