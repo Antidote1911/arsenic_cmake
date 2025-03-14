@@ -43,7 +43,7 @@ jobs:
         dest: "build/arsenic.zip"
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
-        with:
+      with:
         name: arsenic.zip
         path: build/arsenic.zip
 
