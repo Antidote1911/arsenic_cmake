@@ -5,6 +5,7 @@ message(STATUS "Initiating compile using CMake ${CMAKE_VERSION}")
 find_package(Qt6 6 REQUIRED COMPONENTS Core Widgets)
 set(CMAKE_AUTORCC ON)
 qt_standard_project_setup()
+set(CMAKE_CXX_STANDARD 20)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/../cmake)
 find_package(
