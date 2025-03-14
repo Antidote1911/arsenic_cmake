@@ -1,9 +1,5 @@
 name: Build for Windows
 
-on:
-  release:
-    types: [created]
-
 env:
   BUILD_TYPE: Release
   BUILD_FILENAME: arsenic.win64
