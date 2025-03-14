@@ -26,10 +26,12 @@ jobs:
 
     - name: Configure and Build
       run: |
+        mkdir build
         cmake -S . -B ./build
+        cmake --build build
 
     - name: Archive Build
       uses: actions/upload-artifact@v3
       with:
-        name: Qt6App
+        name: arsenic
         path: build
