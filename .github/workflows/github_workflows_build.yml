@@ -44,7 +44,7 @@ jobs:
 
       - name: Build
         working-directory: ${{ github.workspace }}
-        run: cmake --build ./build --config ${{ env.BUILD_TYPE }} -j 24
+        run: cmake --build ./build -DCMAKE_CXX_FLAGS="-std=c++20" --config ${{ env.BUILD_TYPE }} -j 24
 
       - name: Deploy
         working-directory: ${{ github.workspace }}
