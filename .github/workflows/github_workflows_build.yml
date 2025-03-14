@@ -26,11 +26,10 @@ jobs:
 
     - name: Configure and Build
       run: |
-        mkdir build
-        cmake -S . -B build/release
+        cmake -S . -B ./build
 
     - name: Archive Build
       uses: actions/upload-pages-artifact@v3
       with:
         name: Qt6App
-        path: build/release/src
+        path: build
