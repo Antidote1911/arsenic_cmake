@@ -1,5 +1,10 @@
 name: ActionsCI
 
+env:
+  Platform: #Any CPU|Win32|x64
+  Configuration: Release
+  Artifacts: build/Release/
+
 on:
   push:
     branches: [master, develop]
@@ -30,8 +35,13 @@ jobs:
         cmake -B./build -S. ${{ github.workspace }} \
           -DAPP_ARCHITECTURE=x64 \
           -DAPP_EXECUTABLE_FILENAME=${{ env.APP_EXECUTABLE_FILENAME }}
-          -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }}
+          -DCMAKE_BUILD_TYPE=${{env.Configuration}}
           -DCMAKE_PREFIX_PATH=${{ env.Qt6_Dir }}
-        cmake --build ./build --config release
+        cmake --build ./build --config ${{env.Configuration}}
     - name: deploy
       run: windeployqt.exe build\src\Release\arsenic.exe
+    - name: Compress artifacts
+      uses: vimtor/action-zip@v1.1
+      with:
+        files: build\src\Release
+        dest: "build/arsenic.zip"
