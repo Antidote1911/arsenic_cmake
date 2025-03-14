@@ -41,4 +41,7 @@ jobs:
       with:
         files: build\src\Release
         dest: "build/arsenic.zip"
-
+    - name: Release
+      uses: ncipollo/release-action@v1.12.0
+      with:
+        artifacts: "build/arsenic.zip"
