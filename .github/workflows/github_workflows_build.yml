@@ -26,5 +26,6 @@ jobs:
 
     - name: Configure and Build
       run: |
-        qmake -S . -B build/release
-        cmake --build build/release
+        mkdir build
+        cd build
+        cmake .. && make
