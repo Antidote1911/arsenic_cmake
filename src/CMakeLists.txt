@@ -2,7 +2,7 @@ project(arsenic LANGUAGES CXX)
 message(STATUS "Initiating compile using CMake ${CMAKE_VERSION}")
 
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 6 REQUIRED COMPONENTS Core Widgets)
 set(CMAKE_AUTORCC ON)
 qt_standard_project_setup()
 
