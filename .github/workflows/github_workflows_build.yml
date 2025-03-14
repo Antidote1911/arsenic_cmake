@@ -26,11 +26,5 @@ jobs:
 
     - name: Configure and Build
       run: |
-        cmake -S . -B build/release -D CMAKE_BUILD_TYPE=Release
+        cmake -S . -B build/release
         cmake --build build/release
-
-    - name: Archive Build
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: arsenic
-        path: build/release
