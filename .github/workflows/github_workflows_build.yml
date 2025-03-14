@@ -9,7 +9,7 @@ env:
   BUILD_FILENAME: arsenic.win64
   APP_EXECUTABLE_FILENAME: arsenic
   QT_ARCH: win64_msvc2019_64
-  QT_VERSION: "6.4.2"
+  QT_VERSION: "6.8.2"
 
 jobs:
   release-windows-64:
