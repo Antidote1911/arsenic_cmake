@@ -1,5 +1,9 @@
 name: Build for Windows
 
+on:
+  push:
+    Branches: master
+
 env:
   BUILD_TYPE: Release
   BUILD_FILENAME: arsenic.win64
