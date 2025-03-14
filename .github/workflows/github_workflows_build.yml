@@ -42,8 +42,8 @@ jobs:
         files: build\src\Release
         dest: "build/arsenic.zip"
     - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
         with:
-          name: arsenic.zip
-          path: build/arsenic.zip
+        name: arsenic.zip
+        path: build/arsenic.zip
 
