@@ -4,6 +4,7 @@ message(STATUS "Initiating compile using CMake ${CMAKE_VERSION}")
 
 find_package(Qt6 6 REQUIRED COMPONENTS Core Widgets)
 set(CMAKE_AUTORCC ON)
+qt_standard_project_setup()
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/../cmake)
 find_package(
@@ -139,3 +140,7 @@ target_link_libraries(arsenic
         botan_test
 )
 
+if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+  # using Visual Studio C++
+  target_link_libraries(arsenic PRIVATE advapi32 user32 ws2_32)
+endif()
