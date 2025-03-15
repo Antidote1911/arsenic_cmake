@@ -17,7 +17,7 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version:      6.8.0
+        version:      6.8.2
         host:         windows
         target:       desktop
         arch:        win64_mingw
@@ -26,6 +26,7 @@ jobs:
     - name: build
       shell: cmd
       run: |
+        export CMAKE_PREFIX_PATH="$Qt6_Dir/lib/cmake"
         cmake -B./build -S. ${{ github.workspace }} -G "MinGW Makefiles"
         cmake --build ./build --config ${{env.Configuration}}
     - name: deploy
