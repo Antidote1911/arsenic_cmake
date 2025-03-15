@@ -14,11 +14,6 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@main
-    - name: Setup msbuild
-      uses: microsoft/setup-msbuild@v2
-      with:
-        vs-version: '[17,18)'  # 17.xx
-        msbuild-architecture: x64
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
