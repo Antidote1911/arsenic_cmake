@@ -27,7 +27,7 @@ jobs:
       shell: cmd
       run: |
         export CMAKE_PREFIX_PATH="$Qt6_Dir/lib/cmake"
-        cmake -B./build -S. ${{ github.workspace }} -G "MinGW Makefiles"
+        cmake -B./build -S. ${{ github.workspace }} -G "Ninja"
         cmake --build ./build --config ${{env.Configuration}}
     - name: deploy
       run: windeployqt.exe build\src\Release\arsenic.exe
