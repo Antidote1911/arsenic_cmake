@@ -14,6 +14,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@main
+    
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
@@ -26,11 +27,6 @@ jobs:
         
     - name: Add Qt to Path
       run: echo "${{ env.QT_PATH }}\\bin" >> $GITHUB_PATH
-          
-    - name: Set up MinGW
-      uses: luciorubeens/setup-windows-mingw@v1
-      with:
-          architecture: x64
           
     - name: Add MinGW to Path
       run: echo "${{ env.MINGW_PATH }}\\bin" >> $GITHUB_PATH
