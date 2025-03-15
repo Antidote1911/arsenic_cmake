@@ -25,6 +25,7 @@ jobs:
         version:      6.8.1
         host:         windows
         target:       desktop
+        arch:        win64_mingw
         modules:      qtmultimedia
         setup-python: false
     - name: build
