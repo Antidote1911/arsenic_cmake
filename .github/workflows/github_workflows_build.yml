@@ -26,7 +26,7 @@ jobs:
     - name: build
       shell: cmd
       run: |
-        cmake -B./build -S. ${{ github.workspace }}
+        cmake -B./build -S. ${{ github.workspace }} -G "MinGW Makefiles"
         cmake --build ./build --config ${{env.Configuration}}
     - name: deploy
       run: windeployqt.exe build\src\Release\arsenic.exe
