@@ -12,10 +12,10 @@ jobs:
   build:
     runs-on: windows-latest
 
-    env:
-      Qt_Version: 6.8.0
-      Qt_Dir: C:\Qt\${{ env.Qt_Version }}
-      MinGW_Dir: C:\LLVM-MinGW
+env:
+    Qt_Version: 6.8.0
+    Qt_Dir: C:\Qt\${{ env.Qt_Version }}
+    MinGW_Dir: C:\LLVM-MinGW
 
     steps:
     - name: Checkout repository
