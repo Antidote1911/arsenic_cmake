@@ -26,7 +26,7 @@ jobs:
     - name: Add Qt to Path
           run: echo "${{ env.QT_PATH }}\\bin" >> $GITHUB_PATH
     - name: Set up MinGW
-          uses: luciorubeens/setup-windows-mingw@v1
+      uses: luciorubeens/setup-windows-mingw@v1
       with:
           architecture: x64
     - name: Add MinGW to Path
