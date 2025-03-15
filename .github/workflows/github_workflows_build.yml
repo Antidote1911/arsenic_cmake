@@ -23,18 +23,24 @@ jobs:
         arch:        win64_mingw
         modules:      qtmultimedia
         setup-python: false
+        
     - name: Add Qt to Path
-          run: echo "${{ env.QT_PATH }}\\bin" >> $GITHUB_PATH
+      run: echo "${{ env.QT_PATH }}\\bin" >> $GITHUB_PATH
+          
     - name: Set up MinGW
       uses: luciorubeens/setup-windows-mingw@v1
       with:
           architecture: x64
+          
     - name: Add MinGW to Path
-          run: echo "${{ env.MINGW_PATH }}\\bin" >> $GITHUB_PATH
+      run: echo "${{ env.MINGW_PATH }}\\bin" >> $GITHUB_PATH
+          
     - name: Configure CMake
-          run: cmake -G "MinGW Makefiles" -S . -B build
+      run: cmake -G "MinGW Makefiles" -S . -B build
+          
     - name: Build
-         run: cmake --build build --config Release
+      run: cmake --build build --config Release
+         
     - name: deploy
       run: windeployqt.exe build\src\Release\arsenic.exe
     - name: Compress artifacts
