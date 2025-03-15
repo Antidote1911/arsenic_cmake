@@ -17,7 +17,7 @@ env:
     Qt_Dir: C:\Qt\${{ env.Qt_Version }}
     MinGW_Dir: C:\LLVM-MinGW
 
-    steps:
+steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
