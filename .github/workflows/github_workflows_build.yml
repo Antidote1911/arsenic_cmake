@@ -39,25 +39,25 @@ jobs:
         run: rustup target add x86_64-pc-windows-gnu
 
       - name: Configure CMake
-        run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ${{github.workspace}}/build-${{ runner.os }}
+        run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ${{github.workspace}}/build
 
       - name: Build
-        run: cmake --build ${{github.workspace}}/build-${{ runner.os }} --config Release --target arsenic
+        run: cmake --build ${{github.workspace}}/build --config Release --target arsenic
         
       - name: deploy
-        run: windeployqt.exe build\src\release\arsenic.exe
+        run: windeployqt.exe build\src\Release\arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: build\src\release
+           files: build\src\Release
            dest: "build/arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: build\src\release
+            path: build\src\Release
 
   #  build-macos:
   #    runs-on: macos-latest
