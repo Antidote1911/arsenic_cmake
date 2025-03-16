@@ -56,7 +56,23 @@ jobs:
         shell: cmd
         run:  |
           xcopy ${{ github.workspace }}\README.md build\src\
+          rmdir /s /q build\src\generic
+          rmdir /s /q build\src\tls
+          rmdir /s /q build\src\translations
           rmdir /s /q build\src\networkinformation
+          rmdir /s /q build\src\arsenic_autogen
+          rmdir /s /q build\src\botan_test_autogen
+          rmdir /s /q build\src\build
+          rmdir /s /q build\src\CMakeFiles
+          del /F build\src\Qt6Network.dll
+          del /F build\src\Qt6Svg.dll
+          del /F build\src\D3Dcompiler_47.dll
+          del /F build\src\opengl32sw.dll
+          del /F build\src\botan_all.cpp
+          del /F build\src\botan_all.h
+          del /F build\src\cmake_install.cmake
+          del /F build\src\libbotan_test.a
+          
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
