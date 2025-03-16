@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         run: |
-          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B./build -S. ${{ github.workspace }}
+          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B./build
           cmake --build ./build --config Release
         
       - name: deploy
@@ -50,7 +50,7 @@ jobs:
           ls
           cd src
           ls
-          windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe
+          windeployqt.exe --no-compiler-runtime --release /build/src/arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
