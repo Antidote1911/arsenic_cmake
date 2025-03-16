@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         run: |
-          cmake -B./build -S. ${{ github.workspace }}
+          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B./build -S. ${{ github.workspace }}
           cmake --build ./build --config Release
         
       - name: deploy
