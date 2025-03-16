@@ -23,15 +23,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Cache libcaesium
-        id: cache-libcaesium
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-libcaesium
-        with:
-          path: ${{github.workspace}}/build-${{ runner.os }}/libcaesium-prefix
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/libcaesium.conf') }}
-
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
@@ -52,6 +43,21 @@ jobs:
 
       - name: Build
         run: cmake --build ${{github.workspace}}/build-${{ runner.os }} --config Release --target arsenic
+        
+      - name: deploy
+        run: windeployqt.exe build\src\Release\arsenic.exe
+        
+      - name: Compress artifacts
+        uses: vimtor/action-zip@v1.1
+        with:
+           files: build\src\Release
+           dest: "build/arsenic.zip"
+           
+      - name: Upload Artifacts
+           uses: actions/upload-artifact@v4
+           with:
+              name: arsenic.zip
+              path: build\src\Release
 
   #  build-macos:
   #    runs-on: macos-latest
@@ -93,15 +99,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Cache libcaesium
-        id: cache-libcaesium
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-libcaesium
-        with:
-          path: ${{github.workspace}}/build-${{ runner.os }}/libcaesium-prefix
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/libcaesium.conf') }}
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
