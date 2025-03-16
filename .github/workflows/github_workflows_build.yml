@@ -61,14 +61,14 @@ jobs:
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: ${{ github.workspace }}/build/out
+           files: /build/out
            dest: "arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: ${{ github.workspace }}/build/out
+            path: /build/out
 
   #  build-macos:
   #    runs-on: macos-latest
