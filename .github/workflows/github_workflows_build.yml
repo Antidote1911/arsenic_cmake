@@ -55,14 +55,14 @@ jobs:
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: build\src\
+           files: build/release/src
            dest: "build/arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: build\src\
+            path: build/release/src
 
   #  build-macos:
   #    runs-on: macos-latest
