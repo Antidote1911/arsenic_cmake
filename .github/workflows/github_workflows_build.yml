@@ -54,7 +54,6 @@ jobs:
           cd build
           ls
           windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe --dir out
-          cd /build/out
           ls
         
       - name: Compress artifacts
