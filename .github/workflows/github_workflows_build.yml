@@ -44,7 +44,10 @@ jobs:
           cmake --build ./build --config Release
         
       - name: deploy
-        run: windeployqt.exe --no-compiler-runtime --release build\release\arsenic.exe
+        run: |
+          ls -1
+          ls ${{ github.workspace }}
+          windeployqt.exe --no-compiler-runtime --release build\arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
