@@ -1,9 +1,4 @@
 name: Build
-
-env:
-  Configuration: Release
-  Artifacts: build/Release/
-
 on:
   push:
     branches: [ master ]
@@ -42,31 +37,39 @@ jobs:
 
       - name: Install Rust target
         run: rustup target add x86_64-pc-windows-gnu
-        
-      - name: Configure CMake
-        run: cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ${{github.workspace}}/build-${{ runner.os }}
-
 
       - name: Build
         run: |
-          cmake --build ${{github.workspace}}/build-${{ runner.os }} --config Release --target arsenic
+          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B./build -S.
+          cmake --build ./build --config Release --target arsenic
         
       - name: deploy
         run: |
           ls
-          windeployqt.exe --no-compiler-runtime --release ${{github.workspace}}/build-${{ runner.os }}/src/arsenic.exe
+          cd build
+          ls
+          cd src
+          ls
+          windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe
+          
+       - name: cleaning
+         shell: cmd
+         run:  |
+           xcopy ${{ github.workspace }}\README.md build\Release
+           rmdir /s /q build\Release\generic
+           rmdir /s /q build\Release\networkinformation
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: ${{github.workspace}}/build-${{ runner.os }}/src/
+           files: build\Release
            dest: "build/arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: ${{github.workspace}}/build-${{ runner.os }}
+            path: build\Release
 
   #  build-macos:
   #    runs-on: macos-latest
