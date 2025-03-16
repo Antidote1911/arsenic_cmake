@@ -51,6 +51,8 @@ jobs:
           cd release
           ls
           windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/release/src/arsenic.exe --dir out
+          cd src
+          ls
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
