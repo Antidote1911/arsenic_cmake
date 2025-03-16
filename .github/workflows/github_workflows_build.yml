@@ -1,49 +1,48 @@
-name: Build Qt Application
+name: ActionsCI
+
+env:
+  Platform: #Any CPU|Win32|x64
+  Configuration: Release
+  Artifacts: build/Release/
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    branches: [master, develop]
 
 jobs:
-  build:
+  build-windows-qt68:
     runs-on: windows-latest
-
-env:
-    Qt_Version: 6.8.0
-    Qt_Dir: C:\Qt\${{ env.Qt_Version }}
-    MinGW_Dir: C:\LLVM-MinGW
-
-steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up Qt
+    steps:
+    - uses: actions/checkout@main
+    - name: Setup msbuild
+      uses: microsoft/setup-msbuild@v2
+      with:
+        vs-version: '[17,18)'  # 17.xx
+        msbuild-architecture: x64
+    - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version: ${{ env.Qt_Version }}
-        host: windows
-        target: desktop
-        arch: win64_mingw
-        dir: ${{ env.Qt_Dir }}
-
-    - name: Install LLVM MinGW
+        version:      6.8.1
+        host:         windows
+        target:       desktop
+        modules:      qtmultimedia
+        setup-python: false
+    - name: build
+      shell: cmd
       run: |
-        choco install llvm --version=12.0.0
-        choco install mingw --version=8.0.0
-        echo "::add-path::C:\Program Files\LLVM\bin"
-        echo "::add-path::C:\MinGW\bin"
-
-    - name: Configure CMake
-      run: |
-        mkdir build
-        cd build
-        cmake -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=${{ env.Qt_Dir }} ..
-
-    - name: Build
-      run: |
-        cd build
-        cmake --build . --config Release
+        call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
+        set CL=/MP
+        cmake -B./build -S. ${{ github.workspace }}
+        cmake --build ./build --config ${{env.Configuration}}
+    - name: deploy
+      run: windeployqt.exe build\src\Release\arsenic.exe
+    - name: Compress artifacts
+      uses: vimtor/action-zip@v1.1
+      with:
+        files: build\src\Release
+        dest: "build/arsenic.zip"
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: arsenic.zip
+        path: build\src\Release
