@@ -31,7 +31,7 @@ jobs:
     - name: build
       shell: cmd
       run: |
-        cmake -B./build -S. ${{ github.workspace }} -G "MinGW Makefiles"
+        cmake -B build -S . -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=$env:QTDIR  -DCMAKE_BUILD_TYPE=Release
         cmake --build ./build --config ${{env.Configuration}}
     - name: deploy
       run: windeployqt.exe build\src\Release\arsenic.exe
