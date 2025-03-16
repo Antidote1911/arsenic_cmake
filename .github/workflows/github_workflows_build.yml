@@ -49,20 +49,20 @@ jobs:
           cd build
           ls
           windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe --dir out
-          cd src
+          /build/out
           ls
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: /build/release/out
-           dest: "out/arsenic.zip"
+           files: /build/out
+           dest: "arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: /build/release/out
+            path: /build/out
 
   #  build-macos:
   #    runs-on: macos-latest
