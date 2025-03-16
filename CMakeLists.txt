@@ -11,7 +11,7 @@ if (WIN32)
     # using Clang
   elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # using GCC
-    add_compile_options(-Wa,-mbig-obj)
+    add_compile_options(-Wa,-mbig-obj,-mingw32)
   elseif (CMAKE_CXX_COMPILER_ID STREQUAL "Intel")
     # using Intel C++
   elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
