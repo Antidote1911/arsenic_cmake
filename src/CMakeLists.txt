@@ -135,7 +135,7 @@ add_executable(arsenic
 )
 
 target_link_libraries(arsenic
-    PUBLIC
+    PRIVATE
         Qt::Core
         Qt::Widgets
         botan_test
