@@ -45,7 +45,7 @@ jobs:
         
       - name: deploy
         run: |
-          run: ls
+          ls
           windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}\build\release\arsenic.exe
         
       - name: Compress artifacts
