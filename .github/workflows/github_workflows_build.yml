@@ -40,15 +40,13 @@ jobs:
 
       - name: Build
         run: |
-          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ./build -S.
-          cmake ./build -S.
+          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ./build -S. ${{ github.workspace }}
+          cmake --build ./build --config Release
         
       - name: deploy
         run: |
           ls
           cd build
-          ls
-          cd release
           ls
           windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/release/src/arsenic.exe --dir out
           cd src
