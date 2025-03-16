@@ -1,9 +1,4 @@
 name: Build
-
-env:
-  Artifacts: build/Release/
-
-
 on:
   push:
     branches: [ master ]
@@ -45,30 +40,29 @@ jobs:
 
       - name: Build
         run: |
-          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ./build -S. ${{ github.workspace }}
-          cmake --build ./build --config Release
+          cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B./build -S.
+          cmake --build ./build --config Release --target arsenic
         
       - name: deploy
         run: |
           ls
-          windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe --dir out          
-          
-      - name: cleaning
-        shell: cmd
-        run:  |
-          xcopy ${{ github.workspace }}\build\src\arsenic.exe \build\out\
+          cd build
+          ls
+          cd src
+          ls
+          windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: /build/out
-           dest: "arsenic.zip"
+           files: build\src\
+           dest: "build/arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: /build/out
+            path: build\src\
 
   #  build-macos:
   #    runs-on: macos-latest
