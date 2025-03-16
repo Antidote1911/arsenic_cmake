@@ -54,12 +54,12 @@ jobs:
       - name: deploy
         run: |
           ls
-          windeployqt.exe --no-compiler-runtime --release ${{github.workspace}}/build-${{ runner.os }}
+          windeployqt.exe --no-compiler-runtime --release ${{github.workspace}}/build-${{ runner.os }}/src/arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: build\src\
+           files: ${{github.workspace}}/build-${{ runner.os }}/src/
            dest: "build/arsenic.zip"
            
       - name: Upload Artifacts
