@@ -48,7 +48,9 @@ jobs:
           ls
           cd build
           ls
-          windeployqt.exe --no-compiler-runtime --release arsenic.exe
+          cd src
+          ls
+          windeployqt.exe --no-compiler-runtime --release build/src/arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
