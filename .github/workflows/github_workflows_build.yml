@@ -45,7 +45,7 @@ jobs:
         
       - name: deploy
         run: |
-          windeployqt.exe --no-compiler-runtime --release build\release\arsenic.exe
+          windeployqt.exe --no-compiler-runtime --release build\src\release\arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
