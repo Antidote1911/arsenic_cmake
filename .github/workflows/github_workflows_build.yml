@@ -56,7 +56,7 @@ jobs:
       - name: cleaning
         shell: cmd
         run:  |
-          xcopy ${{ github.workspace }}\build\src\arsenic.exe ${{ github.workspace }}\build\out
+          xcopy ${{ github.workspace }}\build\src\arsenic.exe ${{ github.workspace }}\build\out\arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
