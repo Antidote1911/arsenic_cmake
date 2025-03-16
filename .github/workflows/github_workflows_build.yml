@@ -51,7 +51,11 @@ jobs:
       - name: deploy
         run: |
           ls
-          windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe --dir out
+          windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe --dir out          
+          
+      - name: cleaning
+        shell: cmd
+        run:  |
           xcopy ${{ github.workspace }}\build\src\arsenic.exe ${{ github.workspace }}\build\out
         
       - name: Compress artifacts
