@@ -40,8 +40,6 @@ jobs:
 
       - name: Build
         run: |
-          mkdir -p output
-          cd output
           cmake -DCMAKE_PREFIX_PATH="${{env.Qt6_Dir}}" -G "CodeBlocks - MinGW Makefiles" -B ./build -S.
           cmake ./build -S.
         
