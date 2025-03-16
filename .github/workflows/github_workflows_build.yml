@@ -45,19 +45,19 @@ jobs:
         run: cmake --build ${{github.workspace}}/build --config Release --target arsenic
         
       - name: deploy
-        run: windeployqt.exe build\src\Release\arsenic.exe
+        run: windeployqt.exe build\Release\arsenic.exe
         
       - name: Compress artifacts
         uses: vimtor/action-zip@v1.1
         with:
-           files: build\src\Release
+           files: build\Release
            dest: "build/arsenic.zip"
            
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
             name: arsenic.zip
-            path: build\src\Release
+            path: build\Release
 
   #  build-macos:
   #    runs-on: macos-latest
