@@ -32,7 +32,9 @@ jobs:
       shell: cmd
       run: |
         cmake -B build -S . -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH=$env:QTDIR  -DCMAKE_BUILD_TYPE=Release
-        cmake --build ./build --config ${{env.Configuration}}
+        cd build
+        ls
+        mingw32-make -j16
     - name: deploy
       run: windeployqt.exe build\src\Release\arsenic.exe
     - name: Compress artifacts
