@@ -43,7 +43,7 @@ jobs:
 
       - name: Build
         run: |
-          cmake --build ./build --config Release
+          cmake --build /build --config Release
         
       - name: deploy
         run: windeployqt.exe --release build\Release\arsenic.exe
