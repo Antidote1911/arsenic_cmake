@@ -1,4 +1,9 @@
 name: Build
+
+env:
+  Artifacts: build/Release/
+
+
 on:
   push:
     branches: [ master ]
@@ -49,7 +54,7 @@ jobs:
           cd build
           ls
           windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/arsenic.exe --dir out
-          /build/out
+          cd /build/out
           ls
         
       - name: Compress artifacts
