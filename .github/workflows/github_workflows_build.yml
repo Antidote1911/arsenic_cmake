@@ -47,7 +47,7 @@ jobs:
         ls
         cd src
         ls
-        windeployqt.exe --no-compiler-runtime --release build\src\Release\arsenic.exe
+        windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/Release/arsenic.exe
     - name: cleaning
       shell: cmd
       run:  |
