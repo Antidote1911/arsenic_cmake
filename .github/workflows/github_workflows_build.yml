@@ -14,11 +14,13 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@main
+    
     - name: Setup msbuild
       uses: microsoft/setup-msbuild@v2
       with:
         vs-version: '[17,18)'  # 17.xx
         msbuild-architecture: x64
+        
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
@@ -27,6 +29,7 @@ jobs:
         target:       desktop
         modules:      qtmultimedia
         setup-python: false
+        
     - name: Set up Rust
       uses: actions-rs/toolchain@v1
       with:
@@ -40,18 +43,26 @@ jobs:
         set CL=/MP
         cmake -B./build -S. ${{ github.workspace }}
         cmake --build ./build --config ${{env.Configuration}}
+        
     - name: deploy
       run:  |
         windeployqt.exe --no-compiler-runtime --release build/src/Release/arsenic.exe
+        
     - name: cleaning
       shell: cmd
       run:  |
-        xcopy ${{ github.workspace }}\README.md build\src\Release\
-    - name: Compress artifacts
-      uses: vimtor/action-zip@v1.1
-      with:
-        files: build/src/Release
-        dest: "build/arsenic.zip"
+        xcopy ${{ github.workspace }}\README.md build\src\Release
+        rmdir /s /q build\src\Release\generic
+        rmdir /s /q build\src\Release\networkinformation
+        rmdir /s /q build\src\Release\iconengines
+        rmdir /s /q build\src\Release\translations
+        rmdir /s /q build\src\Release\imageformats
+        rmdir /s /q build\src\Release\tls
+        del /F build\src\Release\Qt6Network.dll
+        del /F build\src\Release\Qt6Svg.dll
+        del /F build\src\Release\D3Dcompiler_47.dll
+        del /F build\src\Release\opengl32sw.dll
+
     - name: Upload Artifacts
       uses: actions/upload-artifact@v4
       with:
