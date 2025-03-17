@@ -46,7 +46,7 @@ jobs:
     - name: cleaning
       shell: cmd
       run:  |
-        xcopy ${{ github.workspace }}\README.md build/Release/
+        xcopy ${{ github.workspace }}\README.md build\src\Release\
     - name: Compress artifacts
       uses: vimtor/action-zip@v1.1
       with:
