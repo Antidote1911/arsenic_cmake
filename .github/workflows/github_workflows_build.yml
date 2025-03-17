@@ -52,13 +52,10 @@ jobs:
         xcopy ${{ github.workspace }}\README.md build\src\Release
         rmdir /s /q build\src\Release\generic
         rmdir /s /q build\src\Release\networkinformation
-        rmdir /s /q build\src\Release\iconengines
         rmdir /s /q build\src\Release\translations
-        rmdir /s /q build\src\Release\imageformats
         rmdir /s /q build\src\Release\tls
         del /F build\src\Release\botan_test.lib
         del /F build\src\Release\Qt6Network.dll
-        del /F build\src\Release\Qt6Svg.dll
         del /F build\src\Release\D3Dcompiler_47.dll
         del /F build\src\Release\opengl32sw.dll
 
