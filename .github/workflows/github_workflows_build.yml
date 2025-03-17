@@ -42,16 +42,11 @@ jobs:
         cmake --build ./build --config ${{env.Configuration}}
     - name: deploy
       run:  |
-        ls 
-        cd build
-        ls
-        cd src
-        ls
-        windeployqt.exe --no-compiler-runtime --release ${{ github.workspace }}/build/src/Release/arsenic.exe
+        windeployqt.exe --no-compiler-runtime --release build/src/Release/arsenic.exe
     - name: cleaning
       shell: cmd
       run:  |
-        xcopy ${{ github.workspace }}\README.md build\Release
+        xcopy ${{ github.workspace }}\README.md build/Release/
     - name: Compress artifacts
       uses: vimtor/action-zip@v1.1
       with:
