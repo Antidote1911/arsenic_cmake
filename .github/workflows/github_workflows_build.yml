@@ -1,9 +1,7 @@
 name: ActionsCI
 
 env:
-  Platform: #Any CPU|Win32|x64
   Configuration: Release
-  Artifacts: build/Release/
 
 on:
   push:
@@ -24,7 +22,7 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        version:      6.8.1
+        version:      6.8.2
         host:         windows
         target:       desktop
         modules:      qtmultimedia
@@ -34,7 +32,7 @@ jobs:
       uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
-        override: true        
+        override: true
 
     - name: build
       shell: cmd
@@ -58,6 +56,7 @@ jobs:
         rmdir /s /q build\src\Release\translations
         rmdir /s /q build\src\Release\imageformats
         rmdir /s /q build\src\Release\tls
+        del /F build\src\Release\botan_test.lib
         del /F build\src\Release\Qt6Network.dll
         del /F build\src\Release\Qt6Svg.dll
         del /F build\src\Release\D3Dcompiler_47.dll
