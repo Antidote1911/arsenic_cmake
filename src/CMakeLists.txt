@@ -73,6 +73,8 @@ gcm
 siv
 )
 
+set(app_icon_resource_windows "${CMAKE_SOURCE_DIR}/share/windows/icon.rc")
+
 add_executable(arsenic
     WIN32 MACOSX_BUNDLE
     aboutDialog.ui
@@ -132,6 +134,7 @@ add_executable(arsenic
     arscore/Random.cpp
     arscore/Random.h
     arscore/Global.h
+    ${app_icon_resource_windows}
 )
 
 target_link_libraries(arsenic
@@ -140,11 +143,6 @@ target_link_libraries(arsenic
         Qt::Widgets
         botan_test
 )
-
-if(MSVC)
-  set(arsenic
-      ${CMAKE_SOURCE_DIR}/share/windows/icon.rc)
-endif()
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   # using Visual Studio C++
