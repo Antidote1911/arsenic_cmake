@@ -143,7 +143,7 @@ target_link_libraries(arsenic
 
 if(MSVC)
   set(arsenic
-      ${CMAKE_SOURCE_DIR}/share/icon.rc)
+      ${CMAKE_SOURCE_DIR}/share/windows/icon.rc)
 endif()
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
