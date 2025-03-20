@@ -141,6 +141,11 @@ target_link_libraries(arsenic
         botan_test
 )
 
+if(MSVC)
+  set(arsenic
+      ${CMAKE_SOURCE_DIR}/share/icon.rc)
+endif()
+
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   # using Visual Studio C++
   target_link_libraries(arsenic PRIVATE advapi32 user32 ws2_32)
