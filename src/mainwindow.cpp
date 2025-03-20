@@ -104,10 +104,12 @@ void MainWindow::initViewMenu()
 
     m_ui->actionThemeDark->setData("dark");
     m_ui->actionThemeClassic->setData("classic");
+    m_ui->actionThemeLight->setData("light");
 
     auto themeActions = new QActionGroup(this);
     themeActions->addAction(m_ui->actionThemeDark);
     themeActions->addAction(m_ui->actionThemeClassic);
+    themeActions->addAction(m_ui->actionThemeLight);
 
     auto theme = config()->get(Config::GUI_ApplicationTheme).toString();
     for (auto action : themeActions->actions()) {
@@ -149,6 +151,7 @@ void MainWindow::applyTheme()
         skin()->setSkin("dark");
     }
     else {
+        skin()->setSkin("light");
     }
 
     //setPalette(style()->standardPalette());
