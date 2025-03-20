@@ -17,7 +17,7 @@ if (WIN32)
   elseif (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
     # using Visual Studio C++
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /Zc:__cplusplus")
-    add_definitions(/bigobj)
+    add_compile_options(/bigobj)
   endif()
 endif (WIN32)
 
