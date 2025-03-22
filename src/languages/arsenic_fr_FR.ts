@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.1" language="fr_FR">
 <context>
     <name>AboutDialog</name>
     <message>
         <location filename="../aboutDialog.ui" line="17"/>
         <source>About Arsenic</source>
-        <translation type="unfinished"></translation>
+        <translation>A Propos d&apos;Arsenic</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="102"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>A Propos</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="192"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Thanks to the KeepassXC project for some portion of code like password generator :&lt;br/&gt;&lt;a href=&quot;https://github.com/keepassxreboot/keepassxc&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/keepassxreboot/keepassxc&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="242"/>
         <source>Contributors</source>
-        <translation type="unfinished"></translation>
+        <translation>Contributeurs</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="312"/>
         <source>Debug Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Infos de débug</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="324"/>
         <source>Include the following information whenever you report a bug:</source>
-        <translation type="unfinished"></translation>
+        <translation>Inclure ces informations pour un repport de bug:</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="347"/>
         <source>Copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier dans le presse-papier</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="355"/>
         <source>GPL3 Lisense</source>
-        <translation type="unfinished"></translation>
+        <translation>licence GPL3</translation>
     </message>
     <message>
         <location filename="../aboutDialog.ui" line="388"/>
         <source>Botan Lisense</source>
-        <translation type="unfinished"></translation>
+        <translation>licence Botan</translation>
     </message>
 </context>
 <context>
@@ -54,19 +54,19 @@
     <message>
         <location filename="../argonTests.ui" line="14"/>
         <source>Argon2 Test</source>
-        <translation type="unfinished"></translation>
+        <translation>Tests Argon2</translation>
     </message>
     <message>
         <location filename="../argonTests.ui" line="45"/>
         <location filename="../argonTests.ui" line="55"/>
         <location filename="../argonTests.ui" line="65"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../argonTests.ui" line="84"/>
         <source>NOT IMPLEMENTED</source>
-        <translation type="unfinished"></translation>
+        <translation>En cours de dev</translation>
     </message>
 </context>
 <context>
@@ -74,112 +74,112 @@
     <message>
         <location filename="../configDialog.ui" line="14"/>
         <source>Arsenic Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="20"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="39"/>
         <source> sec</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="55"/>
         <source>Empty clopboard after :</source>
-        <translation type="unfinished"></translation>
+        <translation>Vider le presse-papier aprés :</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="62"/>
         <source>Langage (restart required)</source>
-        <translation type="unfinished"></translation>
+        <translation>Language (redémarage requis)</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="75"/>
         <source>Password derivation</source>
-        <translation type="unfinished"></translation>
+        <translation>Dérivation mot de passe (Argon2)</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="81"/>
         <source>Iterations</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="132"/>
         <source>Memory Limit :</source>
-        <translation type="unfinished"></translation>
+        <translation>Limite mémoire :</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="155"/>
         <source>Files Encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiffrage Fichiers</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="161"/>
         <source>Add finished encrypted files to list</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter les fichiers à la liste une fois chiffrés</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="168"/>
         <source>Encryption type : </source>
-        <translation type="unfinished"></translation>
+        <translation>Algorithme : </translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="176"/>
         <source>ChaCha20Poly1305</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="181"/>
         <source>Serpent/GCM</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="186"/>
         <source>Serpent/SIV</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="191"/>
         <source>Serpent/EAX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="196"/>
         <source>AES-256/GCM</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="201"/>
         <source>AES-256/SIV</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="206"/>
         <source>AES-256/EAX</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="211"/>
         <source>Triple Encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>Triple chiffrage</translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="230"/>
         <source>The decryption routine detect the right parameters automatically.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le déchiffrage detecte automatiquement les parametres requis.</translation>
     </message>
     <message>
         <location filename="../configDialog.cpp" line="25"/>
         <source>Access error for config file %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;accés au fichier %1</translation>
     </message>
     <message>
         <location filename="../configDialog.cpp" line="26"/>
         <source>Could not load configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de charger la configuration</translation>
     </message>
 </context>
 <context>
@@ -187,47 +187,47 @@
     <message>
         <location filename="../hashcheckdialog.ui" line="17"/>
         <source>Hash Calculator</source>
-        <translation type="unfinished"></translation>
+        <translation>Calculateur de Hash</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.ui" line="25"/>
         <source>File   :</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier   :</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.ui" line="42"/>
         <source>Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.ui" line="58"/>
         <source>Open file or drop here</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir fichier ou drag&apos;n drop ici</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.ui" line="78"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.ui" line="88"/>
         <source>Go</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.ui" line="246"/>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.cpp" line="52"/>
         <source>Load file...</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir fichier...</translation>
     </message>
     <message>
         <location filename="../hashcheckdialog.cpp" line="134"/>
         <source>error</source>
-        <translation type="unfinished"></translation>
+        <translation>erreur</translation>
     </message>
 </context>
 <context>
@@ -236,358 +236,362 @@
         <location filename="../mainwindow.ui" line="25"/>
         <location filename="../mainwindow.ui" line="238"/>
         <source>Files Encryption</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiffrage Fichiers</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="65"/>
         <source>Delete original item after encryption/decryption</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer l&apos;original aprés chiffrage ou déchiffrage</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <location filename="../mainwindow.ui" line="128"/>
         <source>Encrypt</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiffrer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="83"/>
         <location filename="../mainwindow.ui" line="139"/>
         <source>Decrypt</source>
-        <translation type="unfinished"></translation>
+        <translation>Déchiffrer</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="97"/>
         <source>CryptoPad</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="153"/>
         <location filename="../mainwindow.ui" line="250"/>
         <source>Logs</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="168"/>
         <source>Password:</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="201"/>
         <source>Confirm:</source>
-        <translation type="unfinished"></translation>
+        <translation>Confirmation:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="208"/>
         <source>Generator</source>
-        <translation type="unfinished"></translation>
+        <translation>Générateur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="219"/>
         <source>View Pass</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir le mot de passe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="259"/>
         <source>Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="263"/>
         <source>Theme</source>
-        <translation type="unfinished"></translation>
+        <translation>Théme</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="275"/>
         <source>Utils</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilitaires</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="283"/>
         <source>Infos</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="290"/>
         <source>Cryptopad</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="314"/>
         <source>toolBar</source>
-        <translation type="unfinished"></translation>
+        <translation>barre d&apos;outils</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="356"/>
         <location filename="../mainwindow.cpp" line="371"/>
         <source>Add File(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter Fichier(s)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="365"/>
         <location filename="../mainwindow.ui" line="472"/>
         <location filename="../mainwindow.ui" line="477"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitter</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="370"/>
         <source>Save as txt file</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer fichier txt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="375"/>
         <source>Select All</source>
-        <translation type="unfinished"></translation>
+        <translation>Selletionner tout</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="384"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="393"/>
         <source>Pass Generator</source>
-        <translation type="unfinished"></translation>
+        <translation>Générateur de mot de passe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="402"/>
         <source>Hash Calculator</source>
-        <translation type="unfinished"></translation>
+        <translation>Calculateur de hash</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="411"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>A Propos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="416"/>
         <source>About Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>A propos de Qt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="421"/>
         <source>Argon2 tests</source>
-        <translation type="unfinished"></translation>
+        <translation>Tests Argon2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
         <source>View Button Toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation>Voir la barre d&apos;outils</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="438"/>
         <source>Open Txt File</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir fichier txt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="447"/>
         <source>Save Txt File</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer fichier txt</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="452"/>
         <source>Encrypt Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiffrer le texte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="457"/>
         <source>Decrypt Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Déchiffrer le texte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="462"/>
         <source>Save as...</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer sous...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="467"/>
         <source>Clear Log View</source>
-        <translation type="unfinished"></translation>
+        <translation>Vider les logs</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="486"/>
         <source>Clear Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Vider l&apos;éditeur</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Encrypt List</source>
-        <translation type="unfinished"></translation>
+        <translation>Chiffrer la liste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="496"/>
         <source>Decrypt List</source>
-        <translation type="unfinished"></translation>
+        <translation>Déchiffrer la liste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="501"/>
         <source>Abort Job</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler travail en cours</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="510"/>
         <source>Remove All Files From List</source>
-        <translation type="unfinished"></translation>
+        <translation>Vider la liste</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="515"/>
         <location filename="../mainwindow.cpp" line="389"/>
         <source>Add Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un dossier</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="523"/>
         <source>Dark</source>
-        <translation type="unfinished"></translation>
+        <translation>Sombre</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="534"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation>Clair</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="542"/>
         <source>Classic (platform-nativ)</source>
-        <translation type="unfinished"></translation>
+        <translation>Classique (Native plateforme)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="132"/>
         <source>Restart Application ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Redémarrer l&apos;application ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="133"/>
         <source>To take effect, Arsenic need to be restarted.
 Do you want to restart now ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour appliquer les changements, Arsenic doit redémarrer.
+Voulez-vous le faire maintenant ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="339"/>
         <source>Remove File</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirer le fichier</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="340"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="341"/>
         <source>Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="342"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="343"/>
         <source>Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="511"/>
         <source>Access error for config file %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;accés au fichier de configuration %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="512"/>
         <source>Could not load configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de charger la configuration</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="618"/>
         <source>Read Error !</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de lecture !</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="618"/>
         <source>Cannot read file %1:
 %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de lire le fichier %1:
+%2.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="632"/>
         <source>File loaded</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier chargé</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="652"/>
         <source>Write Error !</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur d&apos;écriture !</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="652"/>
         <source>Cannot write file %1:
 %2.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;écrire le fichier %1:
+%2.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="666"/>
         <source>File saved</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier enregistré</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="676"/>
         <source>Application</source>
-        <translation type="unfinished"></translation>
+        <translation>Arsenic</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="677"/>
         <source>The document has been modified.
 Do you want to save your changes?</source>
-        <translation type="unfinished"></translation>
+        <translation>Le docoment a été modifié.
+Voulez-vous enregistrer les changements ?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="733"/>
         <source>Encryption Error!</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de chiffrage!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="756"/>
         <source>Decryption Error!</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreure de déchiffrage!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="770"/>
         <source>Passphrase do not match!</source>
-        <translation type="unfinished"></translation>
+        <translation>Le mot de passe ne correspond pas!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="771"/>
         <source>The passphrase fields do not match. Please make sure they were entered correctly and try again.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le mot de passe et sa confirmation doivent correspondre. Merci de vérifier ce que vous avez tapé et ré-essayez.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="777"/>
         <source>Passphrase field is empty !</source>
-        <translation type="unfinished"></translation>
+        <translation>Le mot de passe est vide !</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="778"/>
         <source>You must enter a passphrase.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous devez entrer un mot de passe.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="783"/>
         <source>Job list is empty !</source>
-        <translation type="unfinished"></translation>
+        <translation>La file d&apos;attente est vide !</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="784"/>
         <source>You must add file(s) to the job list to start processing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous devez ajouter des fichiers à la file d&apos;attente pour faire celà.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="789"/>
         <source>Text editor is empty !</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;éditeur de texte est vide !</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="790"/>
         <source>You must add text to editor to start processing.</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous devez ajouter du texte pour faire celà.</translation>
     </message>
 </context>
 <context>

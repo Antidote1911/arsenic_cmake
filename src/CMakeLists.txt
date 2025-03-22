@@ -2,10 +2,11 @@ project(arsenic LANGUAGES CXX)
 message(STATUS "Initiating compile using CMake ${CMAKE_VERSION}")
 
 
-find_package(Qt6 6 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 6 REQUIRED COMPONENTS Core Widgets LinguistTools)
 set(CMAKE_AUTORCC ON)
 qt_standard_project_setup()
 set(CMAKE_CXX_STANDARD 20)
+
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/../cmake)
 find_package(
@@ -75,6 +76,15 @@ siv
 
 set(app_icon_resource_windows "${CMAKE_SOURCE_DIR}/share/windows/icon.rc")
 
+    
+qt_add_translations(arsenic
+    TS_FILES
+        ${CMAKE_CURRENT_SOURCE_DIR}/languages/arsenic_en_US.ts
+        ${CMAKE_CURRENT_SOURCE_DIR}/languages/arsenic_fr_FR.ts
+)
+
+
+
 add_executable(arsenic
     WIN32 MACOSX_BUNDLE
     aboutDialog.ui
@@ -135,6 +145,7 @@ add_executable(arsenic
     arscore/Random.h
     arscore/Global.h
     ${app_icon_resource_windows}
+    ${QM_FILES}
 )
 
 target_link_libraries(arsenic
@@ -148,3 +159,6 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   # using Visual Studio C++
   target_link_libraries(arsenic PRIVATE advapi32 user32 ws2_32)
 endif()
+
+
+add_dependencies(arsenic update_translations) # equivalent of all {target}_lupdate

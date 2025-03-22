@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.28)
 
 project(arsenic)
 
@@ -28,6 +28,7 @@ endif (UNIX)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
 add_subdirectory(src)
+
 
 ## Flags (Release is the default)
 if(NOT CMAKE_BUILD_TYPE)

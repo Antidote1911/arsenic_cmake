@@ -20,5 +20,7 @@
         <file>pixmaps/save_txt.png</file>
         <file>pixmaps/vierge.png</file>
         <file>pixmaps/app.ico</file>
+        <file>pixmaps/refresh.svg</file>
+        <file>pixmaps/clipboard.svg</file>
     </qresource>
 </RCC>
