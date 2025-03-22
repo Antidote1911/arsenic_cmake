@@ -1,0 +1,27 @@
+# Maintainer: Fabrice Corraire <antidote1911@gmail.com>
+
+pkgname=arsenic
+pkgver=5.2
+pkgrel=1
+pkgdesc="Strong file encryption"
+arch=('any')
+url="https://github.com/Antidote1911/arsenic"
+license=('GPL3')
+provides=("arsenic")
+depends=('qt6-base' 'qt6-translations' 'qt6-svg')
+makedepends=('cmake' 'qt6-tools')
+source=("$pkgname::git+https://github.com/Antidote1911/arsenic_cmake")
+sha1sums=('SKIP')
+
+build() {
+  cd "$pkgname"
+  ./build.sh
+}
+
+package() {
+  cd "$pkgname"
+  install -Dm755 "build/src/Release/arsenic" "$pkgdir/usr/bin/arsenic"
+  mkdir -p "$pkgdir/usr/share/arsenic"
+  cp "build/src/arsenic_en_US.qm" "$pkgdir/usr/share/arsenic"
+  cp "build/src/arsenic_fr_FR.qm" "$pkgdir/usr/share/arsenic"
+}
