@@ -159,5 +159,5 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   target_link_libraries(arsenic PRIVATE advapi32 user32 ws2_32)
 endif()
 
-
+set_property(TARGET botan_test PROPERTY QT_EXCLUDE_FROM_TRANSLATION ON)
 add_dependencies(arsenic update_translations) # equivalent of all {target}_lupdate
