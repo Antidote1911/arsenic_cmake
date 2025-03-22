@@ -164,7 +164,7 @@
     <message>
         <location filename="../configDialog.ui" line="211"/>
         <source>Triple Encryption</source>
-        <translation>Triple chiffrage</translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../configDialog.ui" line="230"/>
@@ -412,12 +412,12 @@
     <message>
         <location filename="../mainwindow.ui" line="491"/>
         <source>Encrypt List</source>
-        <translation>Chiffrer la liste</translation>
+        <translation>Chiffrer la file d&apos;attente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="496"/>
         <source>Decrypt List</source>
-        <translation>Déchiffrer la liste</translation>
+        <translation>Déchiffrer la file d&apos;attente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="501"/>
@@ -427,7 +427,7 @@
     <message>
         <location filename="../mainwindow.ui" line="510"/>
         <source>Remove All Files From List</source>
-        <translation>Vider la liste</translation>
+        <translation>Vider la file d&apos;attente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="515"/>
@@ -599,218 +599,218 @@ Voulez-vous enregistrer les changements ?</translation>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="14"/>
         <source>Generate Password</source>
-        <translation type="unfinished"></translation>
+        <translation>Générateur mot de passe</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="25"/>
         <source>Regenerate password</source>
-        <translation type="unfinished"></translation>
+        <translation>Régénérer le mot de passe</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="78"/>
         <source>%p%</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="91"/>
         <location filename="../passwordGeneratorDialog.ui" line="94"/>
         <source>Copy password</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier le mot de passe</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="118"/>
         <source>strength</source>
         <comment>Password strength</comment>
-        <translation type="unfinished"></translation>
+        <translation>Force</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="165"/>
         <source>passwordLength</source>
-        <translation type="unfinished"></translation>
+        <translation>Longueur</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="203"/>
         <source>entropy</source>
-        <translation type="unfinished"></translation>
+        <translation>Entropie</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="244"/>
         <source>&amp;Length:</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Longueur:</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="254"/>
         <location filename="../passwordGeneratorDialog.ui" line="279"/>
         <source>Password length</source>
-        <translation type="unfinished"></translation>
+        <translation>Longueur du mot de passe</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="298"/>
         <source>Switch to advanced mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer le mode avancé</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="301"/>
         <source>Advanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Avancé</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="322"/>
         <source>Character Types</source>
-        <translation type="unfinished"></translation>
+        <translation>Types de caractéres</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="344"/>
         <location filename="../passwordGeneratorDialog.ui" line="347"/>
         <source>Special characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres spéciaux</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="366"/>
         <location filename="../passwordGeneratorDialog.ui" line="369"/>
         <source>Quotes</source>
-        <translation type="unfinished"></translation>
+        <translation>Guillemets apostrophes</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="388"/>
         <location filename="../passwordGeneratorDialog.ui" line="391"/>
         <source>Punctuation</source>
-        <translation type="unfinished"></translation>
+        <translation>Ponctuation</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="410"/>
         <location filename="../passwordGeneratorDialog.ui" line="413"/>
         <source>Dashes and Slashes</source>
-        <translation type="unfinished"></translation>
+        <translation>Tirets et slashs</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="432"/>
         <location filename="../passwordGeneratorDialog.ui" line="435"/>
         <source>Upper-case letters</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettres majuscules</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="454"/>
         <location filename="../passwordGeneratorDialog.ui" line="457"/>
         <source>Numbers</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombres</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="476"/>
         <location filename="../passwordGeneratorDialog.ui" line="479"/>
         <source>Lower-case letters</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettres minuscules</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="498"/>
         <location filename="../passwordGeneratorDialog.ui" line="501"/>
         <source>Math Symbols</source>
-        <translation type="unfinished"></translation>
+        <translation>Symboles mathématiques</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="520"/>
         <location filename="../passwordGeneratorDialog.ui" line="523"/>
         <location filename="../passwordGeneratorDialog.ui" line="526"/>
         <source>Extended ASCII</source>
-        <translation type="unfinished"></translation>
+        <translation>ASCII étendu</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="542"/>
         <location filename="../passwordGeneratorDialog.ui" line="545"/>
         <source>Braces</source>
-        <translation type="unfinished"></translation>
+        <translation>Crochets parenthéses</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="596"/>
         <source>Do not include:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne pas inclure:</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="615"/>
         <source>Additional characters to use for the generated password</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres additionnels à utiliser</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="618"/>
         <source>Additional characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres additionnels</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="631"/>
         <source>Add non-hex letters to &quot;do not include&quot; list</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter les caractéres non-hexa à la liste d&apos;exclusion</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="634"/>
         <source>Hex Passwords</source>
-        <translation type="unfinished"></translation>
+        <translation>Mot de passe hexadécimal</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="637"/>
         <source>Hex</source>
-        <translation type="unfinished"></translation>
+        <translation>Hex</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="656"/>
         <source>Character set to exclude from generated password</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres à exclure du mot de passe généré</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="659"/>
         <source>Excluded characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres exclus</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="669"/>
         <source>Also choose from:</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisir également parmi:</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="678"/>
         <location filename="../passwordGeneratorDialog.ui" line="681"/>
         <source>Excluded characters: &quot;0&quot;, &quot;1&quot;, &quot;l&quot;, &quot;I&quot;, &quot;O&quot;, &quot;|&quot;, &quot;﹒&quot;, &quot;B&quot;, &quot;8&quot;, &quot;G&quot;, &quot;6&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres exclus: &quot;0&quot;, &quot;1&quot;, &quot;l&quot;, &quot;I&quot;, &quot;O&quot;, &quot;|&quot;, &quot;﹒&quot;, &quot;B&quot;, &quot;8&quot;, &quot;G&quot;, &quot;6&quot;</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="684"/>
         <source>Exclude look-alike characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Exclure les caractéres se ressemblants</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="694"/>
         <source>Pick characters from every group</source>
-        <translation type="unfinished"></translation>
+        <translation>Prendre des caractéres dans chaque groupes</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="733"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Appliquer</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="740"/>
         <location filename="../passwordGeneratorDialog.cpp" line="113"/>
         <source>Close</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.ui" line="743"/>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="48"/>
         <source>Regenerate password (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Régénérer le mot de passe (%1)</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="116"/>
         <source>Accept</source>
-        <translation type="unfinished"></translation>
+        <translation>Accepter</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="219"/>
         <source>Entropy: %1 bit</source>
-        <translation type="unfinished"></translation>
+        <translation>Entropie: %1 bit</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="236"/>
@@ -818,46 +818,46 @@ Voulez-vous enregistrer les changements ?</translation>
         <location filename="../passwordGeneratorDialog.cpp" line="246"/>
         <location filename="../passwordGeneratorDialog.cpp" line="251"/>
         <source>Password Quality: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Qualité mot de passe: %1</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="236"/>
         <source>Poor</source>
         <comment>Password quality</comment>
-        <translation type="unfinished"></translation>
+        <translation>Très faible</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="241"/>
         <source>Weak</source>
         <comment>Password quality</comment>
-        <translation type="unfinished"></translation>
+        <translation>Faible</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="246"/>
         <source>Good</source>
         <comment>Password quality</comment>
-        <translation type="unfinished"></translation>
+        <translation>Correct</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="251"/>
         <source>Excellent</source>
         <comment>Password quality</comment>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="260"/>
         <source>Characters: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Charactéres: %1</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="316"/>
         <source>Logograms</source>
-        <translation type="unfinished"></translation>
+        <translation>Logogrammes</translation>
     </message>
     <message>
         <location filename="../passwordGeneratorDialog.cpp" line="320"/>
         <source>Special Characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Caractéres spéciaux</translation>
     </message>
 </context>
 <context>
@@ -865,75 +865,75 @@ Voulez-vous enregistrer les changements ?</translation>
     <message numerus="yes">
         <location filename="../Clipboard.cpp" line="131"/>
         <source>Clearing the clipboard in %1 second(s)…</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Vidage du presse-papier dans %1 seconde(s)…</numerusform>
             <numerusform></numerusform>
         </translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="10"/>
         <source>Data successfully encrypted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Données correctement chiffrées.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="14"/>
         <source>Data successfully decrypted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Données correctement déchiffrées.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="18"/>
         <source>Decryption Failure. Wrong password, or data are corrupted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Echec du déchiffrage. Mot de passe incorrect ou données corrompus.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="22"/>
         <source>This file is not an Arsenic File.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce fichier n&apos;est pas un fichier Arsenic.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="26"/>
         <source>The file was not found.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier est introuvable.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="30"/>
         <source>The file could not be opened for reading.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir le fichier en lecture.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="34"/>
         <source>The encrypted file already exists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier chiffré existe déja.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="38"/>
         <source>The encrypted file could not be opened for writin.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;ouvrir le fichier en écriture.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="42"/>
         <source>Can&apos;t read the header.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de lire le header du fichier.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="46"/>
         <source>Aborted by user. Intermediate file is deleted.</source>
-        <translation type="unfinished"></translation>
+        <translation>Interrompu par l&apos;utilisateur. Fichier incomplet supprimé.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="50"/>
         <source>Invalid Arsenic CryptoBox input.</source>
-        <translation type="unfinished"></translation>
+        <translation>Données invalides.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="54"/>
         <source>Bad Arsenic CryptoBox version.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mauvaise version d&apos;Arsenic.</translation>
     </message>
     <message>
         <location filename="../arscore/messages.cpp" line="58"/>
         <source>Bad Arsenic CryptoBox header.</source>
-        <translation type="unfinished"></translation>
+        <translation>Header invalide.</translation>
     </message>
 </context>
 </TS>
