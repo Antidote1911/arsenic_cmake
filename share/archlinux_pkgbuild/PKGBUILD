@@ -21,7 +21,7 @@ build() {
 package() {
   cd "$pkgname"
   install -Dm755 "build/src/arsenic" "$pkgdir/usr/bin/arsenic"
-  mkdir -p "$pkgdir/usr/share/arsenic"
-  install -Dm755 "build/src/arsenic_en_US.qm" "$pkgdir/usr/share/arsenic"
-  install -Dm755 "build/src/arsenic_fr_FR.qm" "$pkgdir/usr/share/arsenic"
+  mkdir -p "$pkgdir/usr/share/arsenic/languages"
+  install -Dm755 "build/src/arsenic_en_US.qm" "$pkgdir/usr/share/arsenic/languages"
+  install -Dm755 "build/src/arsenic_fr_FR.qm" "$pkgdir/usr/share/arsenic/languages"
 }
