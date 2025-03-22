@@ -145,7 +145,6 @@ add_executable(arsenic
     arscore/Random.h
     arscore/Global.h
     ${app_icon_resource_windows}
-    ${QM_FILES}
 )
 
 target_link_libraries(arsenic

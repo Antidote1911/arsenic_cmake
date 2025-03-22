@@ -54,6 +54,9 @@ jobs:
         rmdir /s /q build\src\Release\networkinformation
         rmdir /s /q build\src\Release\translations
         rmdir /s /q build\src\Release\tls
+        mkdir build\src\Release\languages
+        xcopy build\src\arsenic_en_US.qm build\src\Release\languages
+        xcopy build\src\arsenic_fr_FR.qm build\src\Release\languages
         del /F build\src\Release\botan_test.lib
         del /F build\src\Release\Qt6Network.dll
         del /F build\src\Release\D3Dcompiler_47.dll
