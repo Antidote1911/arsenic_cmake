@@ -39,7 +39,7 @@ jobs:
     - name: Configure build
       run: |
         cd botan-3.7.1
-        python configure.py --with-debug-info --build-mode=release --compiler=msvc --cpu=x86_64 --cc-bin=cl.exe --ninja
+        python configure.py --with-debug-info --compiler=msvc --cpu=x86_64 --cc-bin=cl.exe --ninja
 
     - name: Build Botan
       run: |
