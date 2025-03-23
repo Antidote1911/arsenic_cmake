@@ -146,7 +146,6 @@ target_link_libraries(arsenic
         Qt::Core
         Qt::Widgets
         botan_test
-        pthread
 )
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
