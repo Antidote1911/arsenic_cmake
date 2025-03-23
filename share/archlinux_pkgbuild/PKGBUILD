@@ -9,7 +9,7 @@ url="https://github.com/Antidote1911/arsenic"
 license=('GPL3')
 provides=("arsenic")
 depends=('qt6-base' 'qt6-translations' 'qt6-svg')
-makedepends=('cmake' 'qt6-tools')
+makedepends=('cmake' 'qt6-tools' 'clang')
 source=("$pkgname::git+https://github.com/Antidote1911/arsenic_cmake")
 sha1sums=('SKIP')
 
