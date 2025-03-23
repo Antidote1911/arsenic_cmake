@@ -155,5 +155,5 @@ endif()
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "CLANG")
   # using Visual Studio C++
-  target_link_libraries(arsenic Ws2_32.lib)
+  target_link_libraries(arsenic pthread)
 endif()
