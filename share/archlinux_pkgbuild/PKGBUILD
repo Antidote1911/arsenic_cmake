@@ -24,4 +24,7 @@ package() {
   mkdir -p "$pkgdir/usr/share/arsenic/languages"
   install -Dm755 "build/share/translations/arsenic_en_US.qm" "$pkgdir/usr/share/arsenic/languages"
   install -Dm755 "build/share/translations/arsenic_fr_FR.qm" "$pkgdir/usr/share/arsenic/languages"
+  install -Dm755 "build/share/translations/arsenic_fr_FR.qm" "$pkgdir/usr/share/arsenic/languages"
+  install -Dm755 "build/share/linux/arsenic.desktop" "$pkgdir/usr/share/applications"
+  install -Dm755 "build/src/pixmaps/app.png" "$pkgdir/usr/share/arsenic/arsenic.png"
 }
