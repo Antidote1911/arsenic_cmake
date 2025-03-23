@@ -86,8 +86,9 @@ jobs:
 
       - name: Build
         run:  |
-          sudo wget --no-check-certificate -q O - https://botan.randombit.net/releases/Botan-3.7.1.tar.xz | tar xvJ
-          cd Botan-2.19.4
+          sudo wget --no-check-certificate -q O - https://botan.randombit.net/releases/Botan-3.7.1.tgz
+          tar -xzvf Botan-3.7.1.tgz
+          cd Botan-3.7.1
           ./configure.py
           make
         
