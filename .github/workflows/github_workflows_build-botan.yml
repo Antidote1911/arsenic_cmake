@@ -29,7 +29,6 @@ jobs:
     - name: Install dependencies
       run: |
         choco install -y cmake
-        choco install -y ninja
 
     - name: Download Botan 3.7.1 source
       run: |
@@ -39,9 +38,9 @@ jobs:
     - name: Configure build
       run: |
         cd botan-3.7.1
-        python configure.py --with-debug-info --compiler=msvc --cpu=x86_64 --cc-bin=cl.exe --ninja
-
+        python configure.py --compiler=msvc --cpu=x86_64 --cc-bin=cl.exe
     - name: Build Botan
       run: |
         cd botan-3.7.1
-        ninja
+        make
+        make install
