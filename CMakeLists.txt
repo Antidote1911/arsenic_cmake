@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD 20)
 if (WIN32)
   if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     # using Clang
+    target_link_libraries(arsenic pthread)
   elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # using GCC
     add_compile_options(-Wa,-mbig-obj)
