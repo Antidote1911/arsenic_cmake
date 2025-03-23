@@ -27,19 +27,13 @@ jobs:
         target:       desktop
         modules:      qtmultimedia
         setup-python: false
-        
-    - name: Set up Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        override: true
 
     - name: build
       shell: cmd
       run: |
         call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
         set CL=/MP
-        vcpkg install botan
+        vcpkg install botan:x64-windows
         cmake -S . -B build -G "Ninja Multi-Config"
         cmake --build build --config Release
         
@@ -93,6 +87,9 @@ jobs:
 
       - name: Build
         run:  |
-          sudo apt-get -y install botan
+          sudo wget -qO - https://deb.debian.org/debian/dists/experimental/Release.gpg | sudo apt-key add -
+          sudo add-apt-repository 'deb https://deb.debian.org/debian experimental main'
+          sudo apt-get update -qq
+          sudo apt -t experimental install -yq botan3
           ./build.sh
         
