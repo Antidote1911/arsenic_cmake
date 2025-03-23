@@ -1,0 +1,53 @@
+name: Build Botan 3.7.1 on Windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Set up Visual Studio
+      uses: ilammy/msvc-dev-cmd@v1
+      with:
+        arch: x64
+
+    - name: Install dependencies
+      run: |
+        choco install -y cmake
+        choco install -y ninja
+
+    - name: Download Botan 3.7.1 source
+      run: |
+        curl -L https://github.com/randombit/botan/archive/refs/tags/3.7.1.tar.gz -o botan-3.7.1.tar.gz
+        tar -xzf botan-3.7.1.tar.gz
+
+    - name: Configure build
+      run: |
+        cd botan-3.7.1
+        python configure.py --with-debug-info --build-mode=release --compiler=msvc --cpu=x86_64 --cc-bin=cl.exe --ninja
+
+    - name: Build Botan
+      run: |
+        cd botan-3.7.1
+        ninja
+
+    - name: Archive build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: botan-build
+        path: botan-3.7.1/build/
