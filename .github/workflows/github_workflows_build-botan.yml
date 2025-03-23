@@ -45,9 +45,3 @@ jobs:
       run: |
         cd botan-3.7.1
         ninja
-
-    - name: Archive build artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: botan-build
-        path: botan-3.7.1/build/
