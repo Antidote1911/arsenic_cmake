@@ -39,8 +39,8 @@ jobs:
       run: |
         call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
         set CL=/MP
-        vcpkg install pthread
-        cmake -S . -B build -G "Ninja Multi-Config" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+        vcpkg install botan
+        cmake -S . -B build -G "Ninja Multi-Config"
         cmake --build build --config Release
         
     - name: deploy
