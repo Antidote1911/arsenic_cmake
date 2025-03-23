@@ -152,6 +152,7 @@ target_link_libraries(arsenic
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   # using Visual Studio C++
+  set(OMR_PLATFORM_THREAD_LIBRARY Ws2_32.lib)
   target_link_libraries(arsenic PRIVATE advapi32 user32)
 endif()
 
