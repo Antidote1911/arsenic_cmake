@@ -33,7 +33,8 @@ jobs:
       run: |
         call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
         set CL=/MP
-        cmake -S . -B build -G "Ninja Multi-Config"
+        vcpkg install botan
+        cmake -S . -B build
         cmake --build build --config Release
         
     - name: deploy
@@ -93,4 +94,8 @@ jobs:
           ./configure.py --minimized-build --enable-modules=adler32,aead,aes,aes_ni,argon2,argon2_ssse3,argon2fmt,auto_rng,rng,system_rng,pem,sodium,sha1,sha1_armv8,sha1_sse2,sha1_x86,sha2_32,sha2_32_armv8,sha2_32_bmi2,sha2_32_x86,sha2_64,sha2_64_armv8,sha2_64_bmi2,sha3,skein,keccak,keccak_perm,keccak_perm_bmi2,whirlpool,blake2,blake2mac,blake2s,shake,gost_28147,gost_3410,gost_3411,sm2,sm3,sm4,threefish_512,twofish,streebog,rmd160,md4,md5,crc24,crc32,chacha,chacha20poly1305,chacha_rng,serpent,ctr,eax,gcm,siv
           make
           sudo make install
+          
+      - name: Build Arsenic 
+        run:  |
+          ./build.sh
         
