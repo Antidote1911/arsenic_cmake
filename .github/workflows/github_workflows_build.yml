@@ -87,6 +87,8 @@ jobs:
 
       - name: Build
         run:  |
+          apt-get update
+          apt-get install ca-certificates
           sudo wget -qO - https://deb.debian.org/debian/dists/experimental/Release.gpg | sudo apt-key add -
           sudo add-apt-repository 'deb https://deb.debian.org/debian experimental main'
           sudo apt-get update -qq
