@@ -153,7 +153,6 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   target_link_libraries(arsenic PRIVATE advapi32 user32 Ws2_32)
 endif()
 
-if (CMAKE_CXX_COMPILER_ID STREQUAL "CLANG")
-  # using Visual Studio C++
-  target_link_libraries(arsenic pthread)
-endif()
+
+target_link_libraries(arsenic pthread)
+
