@@ -146,6 +146,7 @@ target_link_libraries(arsenic
         Qt::Core
         Qt::Widgets
         botan_test
+        pthread
 )
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
@@ -153,6 +154,4 @@ if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
   target_link_libraries(arsenic PRIVATE advapi32 user32 Ws2_32)
 endif()
 
-
-target_link_libraries(arsenic pthread)
 
