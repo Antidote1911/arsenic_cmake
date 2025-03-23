@@ -3,10 +3,10 @@ name: Build Botan 3.7.1 on Windows
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   build:
