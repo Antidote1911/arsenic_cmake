@@ -77,7 +77,8 @@ siv
 
 
 set(app_icon_resource_windows "${CMAKE_SOURCE_DIR}/share/windows/icon.rc")
-
+add_subdirectory(zxcvbn)
+set(ZXCVBN_LIBRARIES zxcvbn)
 
 add_executable(arsenic
     WIN32 MACOSX_BUNDLE
@@ -130,9 +131,6 @@ add_executable(arsenic
     arscore/utils.cpp
     arscore/consts.cpp
     arscore/messages.cpp
-    arscore/dict-src.h
-    arscore/zxcvbn.cpp
-    arscore/zxcvbn.h
     arscore/PasswordHealth.h
     arscore/PasswordHealth.cpp
     arscore/Random.cpp
@@ -146,6 +144,7 @@ target_link_libraries(arsenic
         Qt::Core
         Qt::Widgets
         botan_test
+        ${ZXCVBN_LIBRARIES}
 )
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
