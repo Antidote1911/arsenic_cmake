@@ -38,7 +38,7 @@ jobs:
     - name: Configure build
       run: |
         cd botan-3.7.1
-        python configure.py --compiler=msvc --cpu=x86_64 --cc-bin=cl.exe
+        python configure.py --compiler=msvc --cpu=x86_64
     - name: Build Botan
       run: |
         cd botan-3.7.1
