@@ -7,9 +7,6 @@ find_package(Qt6 6 REQUIRED COMPONENTS Core Widgets LinguistTools)
 set(CMAKE_CXX_STANDARD 20)
 
 
-find_package(Threads REQUIRED)
-
-
 if (WIN32)
   if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     # using Clang
@@ -38,4 +35,4 @@ add_subdirectory(share/translations)
 if(NOT CMAKE_BUILD_TYPE)
    set(CMAKE_BUILD_TYPE Release)
 endif()
-target_link_libraries(arsenic PRIVATE Threads::Threads)
+
