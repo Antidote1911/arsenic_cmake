@@ -90,7 +90,7 @@ jobs:
           wget https://botan.randombit.net/releases/Botan-3.7.1.tar.xz
           tar -xvf Botan-3.7.1.tar.xz
           cd Botan-3.7.1
-          ./configure.py --minimized-build --enable-modules=adler32 aead aes aes_ni
+          ./configure.py --minimized-build --enable-modules=adler32, aead, aes, aes_ni, argon2, argon2_ssse3, argon2fmt, auto_rng, rng, system_rng, pem, sodium, sha1, sha1_armv8, sha1_sse2, sha1_x86, sha2_32, sha2_32_armv8, sha2_32_bmi2, sha2_32_x86, sha2_64, sha2_64_armv8, sha2_64_bmi2, sha3, skein, keccak, keccak_perm, keccak_perm_bmi2, whirlpool, blake2, blake2mac, blake2s, shake, gost_28147, gost_3410, gost_3411, sm2, sm3, sm4, threefish_512, twofish, streebog, rmd160, md4, md5, crc24, crc32, chacha, chacha20poly1305, chacha_rng, serpent, ctr, eax, gcm, siv
           make
           sudo make install
         
