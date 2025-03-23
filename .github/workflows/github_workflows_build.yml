@@ -39,7 +39,7 @@ jobs:
       run: |
         call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
         set CL=/MP
-        vcpkg install pthread
+        vcpkg install botan
         cmake -S . -B build -G "Ninja Multi-Config"
         cmake --build build --config Release
         
@@ -92,4 +92,7 @@ jobs:
           cache: true
 
       - name: Build
-        run: ./build.sh
+        run:  |
+          sudo apt-get -y install botan
+          ./build.sh
+        

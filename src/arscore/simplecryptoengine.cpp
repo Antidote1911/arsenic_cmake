@@ -1,6 +1,7 @@
 #include "simplecryptoengine.h"
 #include <cassert>
-#include "botan_all.h"
+#include <botan/argon2.h>
+#include <botan/sodium.h>
 
 using namespace Botan;
 

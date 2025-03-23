@@ -3,7 +3,7 @@
 #include <QObject>
 #include <QVersionNumber>
 
-#include "botan_all.h"
+#include <botan/version.h>
 
 #ifdef CONSTS_EXPORT
 #define CRYPTOTHREAD_API Q_DECL_EXPORT
