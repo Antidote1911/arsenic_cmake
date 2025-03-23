@@ -9,17 +9,75 @@ set(CMAKE_CXX_STANDARD 20)
 
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/../cmake)
-# Find Botan early since the version affects subsequent compiler options
-find_package(Botan REQUIRED)
-if(BOTAN_VERSION VERSION_GREATER_EQUAL "3.0.0")
-    set(WITH_XC_BOTAN3 TRUE)
-elseif(BOTAN_VERSION VERSION_LESS "2.11.0")
-    # Check for minimum Botan version
-    message(FATAL_ERROR "Botan 2.11.0 or higher is required")   
-endif()
-include_directories(SYSTEM ${BOTAN_INCLUDE_DIR})
+find_package(
+    Botan 3.7.1
+    REQUIRED
+)
+# Generate target 'botan_test' with specific modules
+# Any Botan module can be listed here
+botan_generate(
+    botan_test
+adler32
+aead
+aes
+aes_ni
+argon2
+argon2_ssse3
+argon2fmt
+auto_rng
+rng
+system_rng
+pem
+sodium
+sha1
+sha1_armv8
+sha1_sse2
+sha1_x86
+sha2_32
+sha2_32_armv8
+sha2_32_bmi2
+sha2_32_x86
+sha2_64
+sha2_64_armv8
+sha2_64_bmi2
+sha3
+skein
+keccak
+keccak_perm
+keccak_perm_bmi2
+whirlpool
+blake2
+blake2mac
+blake2s
+shake
+gost_28147
+gost_3410
+gost_3411
+sm2
+sm3
+sm4
+threefish_512
+twofish
+streebog
+rmd160
+md4
+md5
+crc24
+crc32
+chacha
+chacha20poly1305
+chacha_rng
+serpent
+ctr
+eax
+gcm
+siv
+)
+
+
 
 set(app_icon_resource_windows "${CMAKE_SOURCE_DIR}/share/windows/icon.rc")
+
 
 add_executable(arsenic
     WIN32 MACOSX_BUNDLE
@@ -87,7 +145,7 @@ target_link_libraries(arsenic
     PRIVATE
         Qt::Core
         Qt::Widgets
-        ${BOTAN_LIBRARIES}
+        botan_test
 )
 
 if (CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")

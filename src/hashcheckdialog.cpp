@@ -1,6 +1,5 @@
 ﻿#include "hashcheckdialog.h"
-#include <botan/hash.h>
-#include <botan/hex.h>
+#include "botan_all.h"
 #include "ui_hashcheckdialog.h"
 #include <QClipboard>
 #include <QCloseEvent>

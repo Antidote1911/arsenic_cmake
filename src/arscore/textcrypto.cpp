@@ -1,8 +1,5 @@
 #include "textcrypto.h"
-#include "botan/aead.h"
-#include "botan/pem.h"
-#include "botan/data_src.h"
-#include "botan/auto_rng.h"
+#include "botan_all.h"
 #include "messages.h"
 #include "triplecryptoengine.h"
 #include <QString>

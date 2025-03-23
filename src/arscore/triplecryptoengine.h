@@ -1,6 +1,6 @@
 #pragma once
 
-#include <botan/aead.h>
+#include "botan_all.h"
 #include "consts.h"
 
 #include <QObject>

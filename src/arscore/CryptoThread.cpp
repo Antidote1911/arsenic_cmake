@@ -10,8 +10,7 @@
 #include <QThread>
 #include <QCoreApplication>
 
-#include <botan/aead.h>
-#include <botan/auto_rng.h>
+#include "botan_all.h"
 #include "messages.h"
 #include "triplecryptoengine.h"
 #include "simplecryptoengine.h"
