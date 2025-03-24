@@ -9,4 +9,4 @@ RUN pacman -Syu --noconfirm \
 
 RUN pacman -S --noconfirm git
 RUN git clone https://github.com/Antidote1911/arsenic_cmake
-RUN /bin/sh -c 'cd /arsenic_cmake; ./build.sh'
+RUN /bin/sh -c 'cd /arsenic_cmake && ./build.sh'
