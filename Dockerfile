@@ -6,3 +6,8 @@ RUN pacman -Syu --noconfirm \
 
 # Add any additional setup or packages you need here
 # Example: RUN pacman -S --noconfirm git
+
+RUN pacman -S --noconfirm git
+RUN git clone https://github.com/Antidote1911/arsenic_cmake
+RUN cd arsenic_cmake
+RUN ./build.sh
