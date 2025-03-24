@@ -1,4 +1,4 @@
-name: ActionsCI
+name: Build Windows
 
 env:
   Configuration: Release
@@ -8,7 +8,7 @@ on:
     branches: [master, develop]
 
 jobs:
-  build-windows-qt68:
+  build-windows:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@main
@@ -73,23 +73,3 @@ jobs:
         name: arsenic.zip
         path: build/src/Release
         
-  build-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          aqtversion: '==3.1.*'
-          version: '6.8.2'
-          host: 'linux'
-          target: 'desktop'
-          arch: 'linux_gcc_64'
-          modules: 'qtimageformats'
-          cache: true
-          
-      - name: Build Arsenic 
-        run:  |
-          ./build.sh

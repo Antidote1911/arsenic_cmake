@@ -1,4 +1,4 @@
-name: Arch Linux CI
+name: Build Archlinux
 
 on: [push, pull_request]
 
